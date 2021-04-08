@@ -88,7 +88,9 @@ hr {
     width: 70%;
     height: auto;
 }
-
+.menus {
+    height: 40px;
+}
 @media (min-width: 768px) {
     #contact {
         position: absolute;
@@ -102,6 +104,12 @@ hr {
     .iml {
         width: 50%;
         height: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .menus {
+        height: 30px;
     }
 }
 /*
