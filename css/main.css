@@ -5,11 +5,13 @@ hr {
     background-color: red;
     margin: 0px;
 }
+/*
 .btn-danger {
     background: red;
     font-weight: bold;
     border-radius: 18px;
 }
+ */
 .navbar-nav li {
     padding-right: 20px;
 }
