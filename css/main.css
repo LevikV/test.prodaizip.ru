@@ -110,6 +110,10 @@ hr {
 .menus {
     height: 40px;
 }
+.categoryMain {
+    font-size: 3em;
+    padding: 0;
+}
 @media (min-width: 768px) {
     #contact {
         position: absolute;
@@ -119,10 +123,9 @@ hr {
     }
 }
 
-@media (max-width: 768px) {
-    .iml {
-        width: 50%;
-        height: auto;
+@media (max-width: 1200px) {
+    .categoryMain {
+        font-size: 2em;
     }
 }
 
