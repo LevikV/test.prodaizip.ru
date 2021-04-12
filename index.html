@@ -21,8 +21,7 @@
     <title>Доска объявлений №1 по продаже оргтехники</title>
 </head>
 <body>
-    <!--Основной контент сайта-->
-    <!--Меню-->
+    <!--Меню для маленьких экранов-->
     <nav class="navbar d-md-none navbar-expand-md bg-dark navbar-dark sticky-top">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">prodaiZIP.ru</a>
@@ -66,44 +65,113 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
 
+    <!--Основной контент сайта-->
+    <div class="container">
         <!--Верхнее меню-->
-        <div class="row menus" style="margin-top: 20px;">
-            <div class="col-lg-7 col-md-6 d-none d-md-block menus" style="padding: 0">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-lg-7 col-md-6 d-none d-md-block menus" style="padding: 0;">
                 <img src="img/logo.png" style="height: 100%; width: auto;">
             </div>
             <div class="col-lg-3 col-md-4 d-none d-md-block menus">
-                <div class="row align-items-center menus" style="height: 100%">
-                    <div class="col-2 offset-2 menus" style="padding: 0;">
-                        <span class="fa-stack fa-1x has-badge" data-count="4">
-                            <i class="fa fa-circle fa-stack-2x" style="color: lightgray;"></i>
-                            <i class="fa fa-bell fa-stack-1x" style="color: dimgray;"></i>
-                        </span>
+                <div class="row menus" style="height: 100%">
+                    <div class="col-2 offset-2 menus d-flex align-items-center" style="padding: 0;">
+                        <a href="#">
+                            <span class="fa-stack fa-1x has-badge" data-count="4">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #eee;"></i>
+                                <i class="fa fa-bell fa-stack-1x" style="color: dimgray;"></i>
+                            </span>
+                        </a>
                     </div>
-                    <div class="col-2 menus" style="padding: 0;">
-                        <span class="fa-stack fa-1x has-badge" data-count="2">
-                            <i class="fa fa-circle fa-stack-2x" style="color: lightgray;"></i>
-                            <i class="fa fa-list fa-stack-1x" style="color: dimgray;"></i>
-                        </span>
+                    <div class="col-2 menus d-flex align-items-center" style="padding: 0; border-right: 1px solid #eee;">
+                        <a href="#">
+                            <span class="fa-stack fa-1x has-badge" data-count="2">
+                                <i class="fa fa-circle fa-stack-2x" style="color: #eee;"></i>
+                                <i class="fa fa-list fa-stack-1x" style="color: dimgray;"></i>
+                            </span>
+                        </a>
                     </div>
-                    <div class="col-4 menus" style="vertical-align: center; padding: 0px 0px 0px 5px; margin: 0;">
-                        <button class="btn btn-info" style=" padding: 0px; width: 90%; height: 80%; border-radius: 8px; background: white; color: #0f6674;">Войти</button>
+                    <div class="col-4 menus d-flex align-items-center justify-content-center" style="padding: 0px 0px 0px 5px; margin: 0;">
+                        <button class="btn btn-info" style=" padding: 0px; width: 90%; height: 80%; border-radius: 12px; background: white; color: #0f6674;">Войти</button>
                     </div>
-                    <div class="col-2 menus" style="padding: 0;">
+                    <div class="col-2 menus d-flex align-items-center justify-content-center" style="padding: 0;">
                         <a href="profile.html">
-                            <img src="img/profile-default_v_1.png" style="width: 100%; height: 100%;">
+                            <img src="img/profile-default_v_1.png" style="width: 90%; height: 90%;">
                         </a>
                      </div>
                  </div>
              </div>
-             <div class="col-sm-2 d-none d-xl-block menus">
-                 <button class="btn btn-danger" style="height: 80%; width: 100%; margin: 0; padding: 0;">Подать объявление</button>
+             <div class="col-sm-2 d-none d-xl-flex align-items-center menus" style="padding: 0;">
+                 <button class="btn btn-danger" style="height: 90%; width: 100%; margin: 0; padding: 0;">Подать объявление</button>
              </div>
-             <div class="col-sm-2 d-none d-md-block d-xl-none menus">
-                 <button class="btn btn-danger" style="height: 80%; width: 100%; margin: 0; padding: 0;">Добавить</button>
+             <div class="col-sm-2 d-none d-md-flex align-items-center d-xl-none menus" style="padding: 0">
+                 <button class="btn btn-danger align-items-center justify-content-center d-flex" style="height: 100%; width: 100%; margin: 0; padding: 0;">Добавить</button>
              </div>
          </div>
+<!--Блок поиска-->
+        <form>
+            <div class="row" style="background: #03a9f4; border-radius: 4px; margin-top: 40px;">
+                <div class="form-row" style="width: 100%; padding: 20px 20px 0 20px;">
+                    <div class="form-group col-md-6">
+                        <label for="inputZapros" class="col-form-label col-form-label-lg" style="color: white;">Что вы ищете</label>
+                        <input type="text" class="form-control form-control-lg" id="inputZapros" placeholder="Плата форматера для HP P1005">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="selectCategory" class="col-form-label col-form-label-lg" style="color: white;">Категория</label>
+                        <select class="form-control form-control-lg" id="selectCategory">
+                            <option>Принтеры/копиры</option>
+                            <option>--Продажа принтеров/копиров</option>
+                            <option>--Принтеры/копиры на запчасти</option>
+                            <option>--Запчасти для принтеров/копиров</option>
+                            <option>----Блоки лазера/сканера/Сканирующие линейки</option>
+                            <option>----Блоки питания</option>
+                            <option>----Блоки проявки</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2 align-items-end justify-content-end d-flex">
+                        <button class="btn btn-warning btn-lg" style="width: 90%;">Поиск</button>
+                    </div>
+                </div>
+                <div class="form-row" style="width: 100%; padding: 0 20px 20px 20px;">
+                    <div class="form-group col-md-6">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCyti" class="col-form-label" style="color: white;">Местоположение</label>
+                                <input type="text" class="form-control" id="inputCyti">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="selectType" class="col-form-label" style="color: white;">Тип объявления</label>
+                                <select class="form-control" id="selectType">
+                                    <option>Любой</option>
+                                    <option>Продается</option>
+                                    <option>Покупается</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="form-row">
+                            <div class="form-group col-md-5">
+                                <label for="inputPriceFrom" class="col-form-label" style="color: white;">Цена от</label>
+                                <input type="text" class="form-control" id="inputPriceFrom">
+                            </div>
+                            <div class="col-md-2 form-group d-flex align-items-end justify-content-center">
+                                <label class="col-form-label" style="color: white;">
+                                    <i class="fa fa-arrows-alt-h" style="color: #eee; font-size: x-large"></i>
+                                </label>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="inputPriceTo" class="col-form-label" style="color: white;">Цена до</label>
+                                <input type="text" class="form-control" id="inputPriceTo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </form>
 
     </div>
 <!--Второй слайд -->
