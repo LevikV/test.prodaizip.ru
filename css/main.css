@@ -114,6 +114,16 @@ hr {
     font-size: 3em;
     padding: 0;
 }
+.categoryMainPrint {
+    color: white;
+}
+.fa-stack:hover .fa-print {
+    color: white;
+}
+.fa-stack:hover .fa-circle {
+    color: red;
+}
+
 @media (min-width: 768px) {
     #contact {
         position: absolute;
