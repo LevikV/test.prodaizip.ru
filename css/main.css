@@ -5,17 +5,9 @@ hr {
     background-color: red;
     margin: 0px;
 }
-/*
-.btn-danger {
-    background: red;
-    font-weight: bold;
-    border-radius: 18px;
-}
- */
 .navbar-nav li {
     padding-right: 20px;
 }
-
 .nav-link {
     font-size: 1.1em !important;
 }
@@ -35,81 +27,10 @@ hr {
     font-weight:bold;
 }
 
-
-.slide1 {
-    background: url("../img/remont_pc.png");
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    color: white;
-}
-.slide1 h1 {
-    font-weight: 800;
-}
-.slide1 h5 {
-    font-weight: 300;
-}
-.slide2 {
-    padding-bottom: 80px;
-}
-.slide3 {
-    padding: 60px;
-    color: red;
-}
-.slide3 h5 {
-    font-weight: bold;
-}
-.slide4 {
-    background: red;
-    padding-top: 40px;
-    color: white;
-}
-.slide4 .col-sm-2 {
-    padding-bottom: 20px;
-}
-.slide5 {
-    padding: 30px;
-}
-.slide6 {
-    background: red;
-    color: white;
-}
-.slide6 img {
-    height: 100%;
-    width: 100%;
-}
-.slide7 {
-    padding-top: 40px;
-}
-.slide8 {
-    background: red;
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.slide9 {
-    height: 400px;
-}
-.slide10 {
-    background: red;
-    color: white;
-    font-weight: bold;
-    padding: 20px;
-}
-
-#contact {
-    background: red;
-    color: white;
-}
-.imo {
-    width: 70%;
-    height: auto;
-}
 .menus {
     height: 40px;
 }
+/*Категории на главной*/
 .categoryMain {
     font-size: 3em;
     padding: 0;
@@ -121,18 +42,160 @@ hr {
     color: white;
     text-shadow: 0px 0px 6px #ccc;
 }
-.fa-stack:hover .fa-circle {
+.categoryMain .fa-stack .fa-stack-1x {
+    font-size: 0.5em;
+}
+.categoryMainCaption {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+.categoryMainCaption a {
+    color: black;
+    text-decoration: none;
+}
+/**/
+.categoryMainPrint .fa-stack:hover .fa-circle {
     color: #0398db;
     text-shadow: 0px 0px 6px #ccc;
 }
-.categoryMainPrint {
+.categoryMainPrint .fa-stack:hover .fa-print {
     color: white;
 }
-
-.fa-stack:hover .fa-print {
+.categoryMainPrint .fa-stack .fa-print {
+    color: #0398db;
+}
+/**/
+.categoryMainPhone .fa-stack:hover .fa-circle {
+    color: #34ce57;
+}
+.categoryMainPhone .fa-stack:hover .fa-phone {
     color: white;
 }
+.categoryMainPhone .fa-stack .fa-phone {
+    color: #34ce57;
+}
+/**/
+.categoryMainTab .fa-stack:hover .fa-circle {
+    color: #6f42c1;
+}
+.categoryMainTab .fa-stack:hover .fa-tablet {
+    color: white;
+}
+.categoryMainTab .fa-stack .fa-tablet {
+    color: #6f42c1;
+}
+/**/
+.categoryMainNotebook .fa-stack:hover .fa-circle {
+    color: #c69500;
+}
+.categoryMainNotebook .fa-stack:hover .fa-laptop {
+    color: white;
+}
+.categoryMainNotebook .fa-stack .fa-laptop {
+    color: #c69500;
+}
+/**/
+.categoryMainTV .fa-stack:hover .fa-circle {
+    color: #c82333;
+}
+.categoryMainTV .fa-stack:hover .fa-tv {
+    color: white;
+}
+.categoryMainTV .fa-stack .fa-tv {
+    color: #c82333;
+}
+/**/
+.categoryMainPC .fa-stack:hover .fa-circle {
+    color: #ff4500;
+}
+.categoryMainPC .fa-stack:hover .fa-desktop {
+    color: white;
+}
+.categoryMainPC .fa-stack .fa-desktop {
+    color: #ff4500;
+}
+/**/
+.categoryMainRashodka .fa-stack:hover .fa-circle {
+    color: deeppink;
+}
+.categoryMainRashodka .fa-stack:hover .fa-cogs {
+    color: white;
+}
+.categoryMainRashodka .fa-stack .fa-cogs {
+    color: deeppink;
+}
+/**/
+.categoryMainOther .fa-stack:hover .fa-circle {
+    color: #686868;
+}
+.categoryMainOther .fa-stack:hover .fa-plug {
+    color: white;
+}
+.categoryMainOther .fa-stack .fa-plug {
+    color: #686868;
+}
+/*Объявления на главной*/
+.goodsMain p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+}
+.goodsMain h6 {
+    margin: 0;
+    padding: 0;
+}
+figure {
+    overflow: hidden;
 
+}
+figure h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #0398db;
+}
+figure p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goodsMain .city {
+    color: #686868;
+}
+.goodsMain .dateTime {
+    color: #686868;
+}
+.goodsMain .price {
+    font-weight: bold;
+}
+.goodsMain img {
+    height: 100%;
+    width: auto;
+    max-height: 170px;
+}
+/*Сервисы ProdaiZIP*/
+.serviceProdaiZIP p {
+    font-size: 0.8em;
+}
+.serviceProdaiZIP i {
+    padding-top: 5px;
+    font-size: 2.2em;
+    color: #0398db;
+}
+
+/*Изменение элементов при изменении масштаба страницы*/
+@media (max-width: 1200px) {
+    .categoryMain {
+        font-size: 2em;
+    }
+}
+@media (max-width: 1200px) {
+    .menus {
+        height: 30px;
+    }
+}
+/*Остаток старого кода*/
 @media (min-width: 768px) {
     #contact {
         position: absolute;
@@ -141,53 +204,3 @@ hr {
         margin-left: 60px;
     }
 }
-
-@media (max-width: 1200px) {
-    .categoryMain {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 1200px) {
-    .menus {
-        height: 30px;
-    }
-}
-/*
-.iml{
-    width: 70%;
-    height: auto;
-}
- */
-/*
-.carousel-inner {
-    height: 500px;
-}
-
-.carousel-inner img {
-    height: 100%;
-}
-
-@media (min-width: 1100px) {
-    .carousel-inner img {
-        width: 100%;
-    }
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 50;
-    transform: translateY(-50%);
-    text-shadow: 1px 1px 10px #000000;
-}
-
-.display-2 {
-    font-weight: 500 !important;
-}
-
-@media (max-width: 450px) {
-    .carousel-caption .display-2 {
-        font-size: 2em;
-    }
-}
- */
