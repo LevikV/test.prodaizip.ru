@@ -1,10 +1,5 @@
 /* например, сделаем гибкими только те изображения, которые расположены в элементе с классом main */
-hr {
-    height: 12px;
-    color: red;
-    background-color: red;
-    margin: 0px;
-}
+
 .navbar-nav li {
     padding-right: 20px;
 }
@@ -183,7 +178,63 @@ figure p {
     font-size: 2.2em;
     color: #0398db;
 }
+/*Блок быстрый поиск*/
+.fastSearch thead {
+    background-color: #0398db;
+    color: white;
+}
+.fastSearch table i {
+    font-size: 2em;
+    color: #c82333;
+}
+.fastSearch td:last-child {
+    text-align: right;
+}
+.fastSearch tr:last-child td {
+    text-align: center;
+}
+/*Подвал сайта*/
+.podval {
+    background-color: #0398db;
+}
+.podval h2 {
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.podval h5 {
+    color: white;
+    padding-bottom: 10px;
+}
+.podval h6 {
+    text-align: center;
+    font-size: 0.8em;
+    color: black;
+}
+.podval p {
+    padding: 0;
+    margin: 0;
+    color: #cbd3da;
+}
+.podval a {
+    color: white;
+}
+.podval .priziv {
+    padding-bottom: 80px;
+}
+.podval .btn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.podval .btn-warning {
+    color: black;
+}
+.podval .btn-danger {
+    background-color: transparent;
+    color: #ffc107;
+    border-color: #ffc107;
 
+}
 /*Изменение элементов при изменении масштаба страницы*/
 @media (max-width: 1200px) {
     .categoryMain {
