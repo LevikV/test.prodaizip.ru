@@ -26,12 +26,16 @@
     height: 40px;
 }
 /*Категории на главной*/
+.blockCategoryMain {
+    padding-top: 30px;
+}
 .categoryMain {
     font-size: 3em;
-    padding: 0;
+    padding: 30px 0 0 0;
     display: flex;
     align-items: start;
     justify-content: center;
+    overflow: hidden;
 }
 .categoryMain .fa-circle {
     color: white;
@@ -253,14 +257,5 @@ figure p {
 @media (max-width: 1200px) {
     .menus {
         height: 30px;
-    }
-}
-/*Остаток старого кода*/
-@media (min-width: 768px) {
-    #contact {
-        position: absolute;
-        z-index: 1;
-        margin-top: 100px;
-        margin-left: 60px;
     }
 }
