@@ -355,10 +355,23 @@ figure p {
     color: #cbd3da;
 }
 .podval a {
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+}
+.podval a:hover {
+    font-weight: bolder;
+    background-color: white;
+    color: #0398db;
+    text-decoration: none;
+}
+.podvalCopyright a{
+    font-weight: normal;
     color: white;
     text-decoration: underline;
 }
-.podval a:hover {
+.podvalCopyright a:hover {
+    background-color: transparent;
     color: black;
     text-decoration: none;
 }
