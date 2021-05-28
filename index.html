@@ -4,120 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Подключаем иконочный шрифт FontAwesome 4-ой версии. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
 
-    <script src="js/main.js"></script>
+    <!-- Корректировка стиля. -->
     <link rel="stylesheet" href="css/main.css">
-    <!--Подключаем иконочный шрифт-->
-    <link rel="stylesheet" href="css/all.css">
 
     <title>Доска объявлений №1 по продаже оргтехники</title>
 </head>
 <body>
-    <!--Меню для маленьких экранов-->
-    <nav class="navbar d-md-none navbar-expand-md bg-dark navbar-dark sticky-top">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">prodaiZIP.ru</a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#search">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="search">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Поиск</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Поиск по категории</a>
-                </li>
-            </ul>
-        </div>
-        <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Главная</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Услуги</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Турбо</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Отзывы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Цены</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!--Меню для маленьких экранов-->
+<nav class="navbar d-md-none navbar-expand-md navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">ProdaiZIP.ru</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#search">
+            <i class="fa fa-search"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
+            <i class="fa fa-user"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <i class="fa fa-list"></i>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="search">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <form class="form">
+                    <label for="searchInput">Что вы ищете</label>
+                    <input id="searchInput" class="form-control " type="search" placeholder="Введите слово для поиска">
+                    <label for="searchCategory">Категория</label>
+                    <select class="form-control" id="searchCategory">
+                        <option>Принтеры/копиры</option>
+                        <option>Телефоны</option>
+                        <option>Планшеты</option>
+                        <option>Ноутбуки</option>
+                        <option>Мониторы/телевизоры</option>
+                        <option>Компьютеры/комплектующие</option>
+                        <option>Расходные материалы</option>
+                        <option>Прочее</option>
+                    </select>
+                    <label for="searchCity">Местоположение</label>
+                    <input id="searchCity" class="form-control " type="text" placeholder="Город">
+                    <button class="btn btn-success" type="submit">Поиск</button>
+                    <button class="btn btn-danger" type="submit">Сброс</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="profile">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Войти</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Зарегистрироваться</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+            <div class="menuMobile">
+                <a class="nav-link btn btn-success btn-sm" href="#"><i class="fa fa-plus-circle"> Добавить объявление</i></a>
+                <a class="nav-link btn btn-sm btn-danger" href="#"><i class="fa fa-plus-circle"> Добавить горячий запрос</i></a>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все объявления</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Обратная связь</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <!--Основной контент сайта-->
+<!--Основной контент сайта-->
     <div class="container">
-        <!--Верхнее меню-->
-        <div class="row" style="margin-top: 20px;">
-            <div class="col-lg-7 col-md-6 d-none d-md-block menus" style="padding: 0;">
-                <img src="img/logo.png" style="height: 100%; width: auto;">
+<!--Верхнее меню-->
+        <div class="row blockMenuMain">
+            <div class="col-lg-7 col-md-6 d-none d-md-block menus logo">
+                <img src="img/logo.png">
             </div>
             <div class="col-lg-3 col-md-4 d-none d-md-block menus">
-                <div class="row menus" style="height: 100%">
-                    <div class="col-2 offset-2 menus d-flex align-items-center" style="padding: 0;">
+                <div class="row menus" >
+                    <div class="col-2 offset-2 menus d-flex align-items-center iconNotice">
                         <a href="#">
                             <span class="fa-stack fa-1x has-badge" data-count="4">
-                                <i class="fa fa-circle fa-stack-2x" style="color: #eee;"></i>
-                                <i class="fa fa-bell fa-stack-1x" style="color: dimgray;"></i>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-bell fa-stack-1x"></i>
                             </span>
                         </a>
                     </div>
-                    <div class="col-2 menus d-flex align-items-center" style="padding: 0; border-right: 1px solid #eee;">
+                    <div class="col-2 menus d-flex align-items-center iconAd">
                         <a href="#">
                             <span class="fa-stack fa-1x has-badge" data-count="2">
-                                <i class="fa fa-circle fa-stack-2x" style="color: #eee;"></i>
-                                <i class="fa fa-list fa-stack-1x" style="color: dimgray;"></i>
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-list fa-stack-1x"></i>
                             </span>
                         </a>
                     </div>
-                    <div class="col-4 menus d-flex align-items-center justify-content-center" style="padding: 0px 0px 0px 5px; margin: 0;">
-                        <button class="btn btn-info" style=" padding: 0px; width: 90%; height: 80%; border-radius: 12px; background: white; color: #0f6674;">Войти</button>
+                    <div class="col-4 menus d-flex align-items-center justify-content-center loginMenu">
+                        <button class="btn btn-info">Войти</button>
                     </div>
-                    <div class="col-2 menus d-flex align-items-center justify-content-center" style="padding: 0;">
+                    <div class="col-2 menus d-flex align-items-center justify-content-center profileMenu">
                         <a href="profile.html">
-                            <img src="img/profile-default_v_1.png" style="width: 90%; height: 90%;">
+                            <img src="img/profile-default_v_1.png">
                         </a>
                      </div>
                  </div>
              </div>
-             <div class="col-sm-2 d-none d-xl-flex align-items-center menus" style="padding: 0;">
-                 <button class="btn btn-danger" style="height: 90%; width: 100%; margin: 0; padding: 0;">Подать объявление</button>
+             <div class="col-sm-2 d-none d-xl-flex align-items-center menus btnLoginMenu1">
+                 <button class="btn btn-danger">Подать объявление</button>
              </div>
-             <div class="col-sm-2 d-none d-md-flex align-items-center d-xl-none menus" style="padding: 0">
-                 <button class="btn btn-danger align-items-center justify-content-center d-flex" style="height: 100%; width: 100%; margin: 0; padding: 0;">Добавить</button>
+             <div class="col-sm-2 d-none d-md-flex align-items-center d-xl-none menus btnLoginMenu2">
+                 <button class="btn btn-danger align-items-center justify-content-center d-flex">Добавить</button>
              </div>
          </div>
 <!--Блок поиска-->
         <form>
-            <div class="row" style="background: #03a9f4; border-radius: 4px; margin-top: 40px;">
-                <div class="form-row" style="width: 100%; padding: 20px 20px 0 20px; margin: 0;">
+            <div class="row blockSearchMain">
+                <div class="form-row rowSearchMain">
                     <div class="form-group col-md-6">
-                        <label for="inputZapros" class="col-form-label col-form-label-lg" style="color: white;">Что вы ищете</label>
+                        <label for="inputZapros" class="col-form-label col-form-label-lg">Что вы ищете</label>
                         <input type="text" class="form-control form-control-lg" id="inputZapros" placeholder="Плата форматера для HP P1005">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="selectCategory" class="col-form-label col-form-label-lg" style="color: white;">Категория</label>
+                        <label for="selectCategory" class="col-form-label col-form-label-lg">Категория</label>
                         <select class="form-control form-control-lg" id="selectCategory">
                             <option>Принтеры/копиры</option>
                             <option>--Продажа принтеров/копиров</option>
@@ -129,18 +151,18 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2 align-items-end justify-content-end d-flex">
-                        <button class="btn btn-warning btn-lg" style="width: 90%;">Поиск</button>
+                        <button class="btn btn-warning btn-lg">Поиск</button>
                     </div>
                 </div>
-                <div class="form-row" style="width: 100%; margin: 0; padding: 0 20px 0px 20px;">
+                <div class="form-row rowSearchMain">
                     <div class="form-group col-lg-6 d-none d-lg-block">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputCyti" class="col-form-label" style="color: white;">Местоположение</label>
+                                <label for="inputCyti" class="col-form-label">Местоположение</label>
                                 <input type="text" class="form-control" id="inputCyti">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="selectType" class="col-form-label" style="color: white;">Тип объявления</label>
+                                <label for="selectType" class="col-form-label">Тип объявления</label>
                                 <select class="form-control" id="selectType">
                                     <option>Любой</option>
                                     <option>Продается</option>
@@ -152,37 +174,40 @@
                     <div class="form-group col-lg-4 d-none d-lg-block">
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <label for="inputPriceFrom" class="col-form-label" style="color: white;">Цена от</label>
+                                <label for="inputPriceFrom" class="col-form-label">Цена от</label>
                                 <input type="text" class="form-control" id="inputPriceFrom">
                             </div>
                             <div class="col-md-2 form-group d-flex align-items-end justify-content-center">
-                                <label class="col-form-label" style="color: white;">
-                                    <i class="fa fa-arrows-alt-h" style="color: #eee; font-size: x-large"></i>
+                                <label class="col-form-label">
+                                    <i class="fa fa-arrows-h"></i>
                                 </label>
                             </div>
                             <div class="form-group col-md-5">
-                                <label for="inputPriceTo" class="col-form-label" style="color: white;">Цена до</label>
+                                <label for="inputPriceTo" class="col-form-label">Цена до</label>
                                 <input type="text" class="form-control" id="inputPriceTo">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-row" style="width: 100%; height: 30px; padding: 0 20px 0 20px; margin: 0; border-top: 1px solid #eee; color: white; background-color: #0398db; border-radius: 0 0 4px 4px;">
-                    <div class="form-group col-md-6 d-flex justify-content-start">
-                        <a style="color: white; text-decoration: none;" href="#">Очистить поиск</a>
+                <div class="form-row rowSearchBottom">
+                    <div class="form-group col-6 col-md-6 d-flex justify-content-start">
+                        <a href="#">Очистить поиск</a>
                     </div>
-                    <div class="form-group col-md-6 d-flex justify-content-end">
-                        <a style="color: white; text-decoration: none;" href="#">Показать все</a>
+                    <div class="form-group col-6 col-md-6 d-flex justify-content-end">
+                        <a href="#">Показать все</a>
                     </div>
                 </div>
             </div>
         </form>
 <!--Блок категорий-->
-        <div class="row justify-content-around" style="margin-top: 30px;">
-            <div class="col-md-1 categoryMain categoryMainPrint">
-                <div class="row">
+        <div id="myModal" class="modal fade">
+            <!--...-->
+        </div>
+        <div class="row justify-content-around">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPrint">
+                <div class="row text-center">
                     <div class="col-12">
-                        <a href="#">
+                        <a href="#myModal" data-toggle="modal">
                             <span class="fa-stack">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-print fa-stack-1x"></i>
@@ -190,12 +215,12 @@
                         </a>
                     </div>
                     <div class="col-12 categoryMainCaption">
-                        <a href="#">Принтеры / копиры</a>
+                        <a href="#myModal" data-toggle="modal">Принтеры / копиры</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainPhone">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPhone">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -209,8 +234,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainTab">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainTab">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -224,8 +249,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainNotebook">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainNotebook">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -239,8 +264,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainTV">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainTV">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -254,8 +279,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainPC">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPC">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -269,8 +294,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainRashodka">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainRashodka">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -284,8 +309,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-1 categoryMain categoryMainOther">
-                <div class="row">
+            <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainOther">
+                <div class="row text-center">
                     <div class="col-12">
                         <a href="#">
                             <span class="fa-stack">
@@ -300,12 +325,14 @@
                 </div>
             </div>
         </div>
-<!--Баннер-->
-        <div class="row" style="margin-top: 30px;">
-            <div class="col-9 goodsMain">
+    </div>
+<!--Блок объявлений и сервисов-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 goodsMain">
                 <h5>Последние объявления</h5>
                 <div class="row align-items-end">
-                    <div class="col-4">
+                    <div class="col-6 col-sm-4">
                         <figure>
                             <img src="img/print_str.jpg">
                             <figcaption>
@@ -316,7 +343,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-sm-4">
                         <figure>
                             <img src="img/noutebook.jpg">
                             <figcaption>
@@ -327,7 +354,7 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-4">
+                    <div class="col-6 col-sm-4">
                         <figure>
                             <img src="img/printer_2.jpg">
                             <figcaption>
@@ -340,11 +367,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 serviceProdaiZIP">
+            <div class="col-12 col-lg-3 serviceProdaiZIP">
                 <h5>Сервисы ProdaiZIP</h5>
                 <div class="row">
                     <div class="col-2">
-                        <i class="fa fa-shield-alt"></i>
+                        <i class="fa fa-shield"></i>
                     </div>
                     <div class="col-10">
                         <h6>Безопасная сделка</h6>
@@ -360,11 +387,11 @@
                 </div>
             </div>
         </div>
-<!--Блок Горячие запросы -->
+        <!--Блок Горячие запросы -->
         <div class="row">
-            <div class="col-12 fastSearch" style="padding-top: 30px;">
+            <div class="col-12 fastSearch">
                 <h5>Горячие запросы</h5>
-                <table class="table table-hover">
+                <table class="table table-responsive-sm table-hover">
                     <thead>
                     <tr>
                         <th>Раздел</th>
@@ -411,13 +438,14 @@
                         <td><button class="btn btn-success">Предложить</button></td>
                     </tr>
                     <tr>
-                        <td colspan="5">Смотреть все запросы ></td>
+                        <td colspan="5"><a href="#">Смотреть все запросы ></a></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
 <!--Подвал сайта-->
     <div class="container-fluid podval">
         <div class="row justify-content-around">
@@ -426,41 +454,46 @@
                 <button class="btn btn-warning">Зарегистрироваться</button>
                 <button class="btn btn-danger">Подать объявление</button>
             </div>
-            <div class="col-2">
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
                 <h5><i class="fa fa-list"></i>Услуги</h5>
-                <p>Подать объявление</p>
-                <p>Горящий запрос</p>
-                <p>Безопасная сделка</p>
-                <p>Размещение рекламы</p>
+                <p><a href="#">Подать объявление</a></p>
+                <p><a href="#">Горящий запрос</a></p>
+                <p><a href="#">Безопасная сделка</a></p>
+                <p><a href="#">Размещение рекламы</a></p>
             </div>
-            <div class="col-2">
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
                 <h5><i class="fa fa-cogs"></i>Служба поддержки</h5>
-                <p>Обратная связь</p>
-                <p>Сотрудничество</p>
-                <p>Жалоба на объявление</p>
+                <p><a href="#">Обратная связь</a></p>
+                <p><a href="#">Сотрудничество</a></p>
+                <p><a href="#">Жалоба на объявление</a></p>
             </div>
-            <div class="col-2">
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
                 <h5><i class="fa fa-info"></i>Информация</h5>
-                <p>О компании</p>
-                <p>Политика безопасности</p>
-                <p>Условия и соглашения</p>
+                <p><a href="#">О компании</a></p>
+                <p><a href="#">Политика безопасности</a></p>
+                <p><a href="#">Условия и соглашения</a></p>
             </div>
-            <div class="col-2">
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
                 <h5><i class="fa fa-id-card"></i>Личный кабинет</h5>
-                <p>Мои объявления</p>
-                <p>Мои запросы</p>
-                <p>Мои сообщения</p>
-                <p>Избранное</p>
-                <p>Кошелек</p>
-                <p>Профиль</p>
+                <p><a href="#">Мои объявления</a></p>
+                <p><a href="#">Мои запросы</a></p>
+                <p><a href="#">Мои сообщения</a></p>
+                <p><a href="#">Избранное</a></p>
+                <p><a href="#">Кошелек</a></p>
+                <p><a href="#">Профиль</a></p>
             </div>
-            <div class="col-12">
+            <div class="col-12 podvalCopyright">
                 <hr>
                 <h6>Пользование сервисами сайта, в том числе подача объявлений, означает принятие условий <a href="#">пользовательского соглашения</a></h6>
                 <h6>Все права защищены. ProdaiZIP©</h6>
             </div>
         </div>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
