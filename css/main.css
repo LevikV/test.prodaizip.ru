@@ -149,6 +149,20 @@ html, body {
     width: 100%; height: 30px; padding: 0 20px 0 20px; margin: 0; border-top: 1px solid #eee; color: white; background-color: #0398db; border-radius: 0 0 4px 4px;
 }
 /*Категории на главной*/
+.modal {
+    text-align: center;
+}
+.modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+}
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
 .blockCategoryMain {
     padding-top: 30px;
 }
@@ -332,6 +346,10 @@ figure p {
 .fastSearch tr:last-child td {
     text-align: center;
 }
+.fastSearch a {
+    font-size: 0.8em;
+    color: dimgray;
+}
 /*Подвал сайта*/
 .podval {
     background-color: #0398db;
@@ -364,8 +382,7 @@ figure p {
 }
 .podval a:hover {
     font-weight: bolder;
-    background-color: white;
-    color: #0398db;
+    color: white;
     text-decoration: none;
 }
 .podvalCopyright a{
@@ -375,7 +392,8 @@ figure p {
 }
 .podvalCopyright a:hover {
     background-color: transparent;
-    color: black;
+    font-weight: bolder;
+    color: white;
     text-decoration: none;
 }
 .podval .priziv {
