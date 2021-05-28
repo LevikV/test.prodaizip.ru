@@ -91,7 +91,7 @@
 <!--Основной контент сайта-->
     <div class="container">
 <!--Верхнее меню-->
-        <div class="row" style="margin-top: 20px;">
+        <div class="row blockMenuMain">
             <div class="col-lg-7 col-md-6 d-none d-md-block menus" style="padding: 0;">
                 <img src="img/logo.png" style="height: 100%; width: auto;">
             </div>
@@ -132,14 +132,14 @@
          </div>
 <!--Блок поиска-->
         <form>
-            <div class="row" style="background: #03a9f4; border-radius: 4px; margin-top: 40px;">
-                <div class="form-row" style="width: 100%; padding: 20px 20px 0 20px; margin: 0;">
+            <div class="row blockSearchMain">
+                <div class="form-row rowSearchMain">
                     <div class="form-group col-md-6">
-                        <label for="inputZapros" class="col-form-label col-form-label-lg" style="color: white;">Что вы ищете</label>
+                        <label for="inputZapros" class="col-form-label col-form-label-lg">Что вы ищете</label>
                         <input type="text" class="form-control form-control-lg" id="inputZapros" placeholder="Плата форматера для HP P1005">
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="selectCategory" class="col-form-label col-form-label-lg" style="color: white;">Категория</label>
+                        <label for="selectCategory" class="col-form-label col-form-label-lg">Категория</label>
                         <select class="form-control form-control-lg" id="selectCategory">
                             <option>Принтеры/копиры</option>
                             <option>--Продажа принтеров/копиров</option>
@@ -151,18 +151,18 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2 align-items-end justify-content-end d-flex">
-                        <button class="btn btn-warning btn-lg" style="width: 90%;">Поиск</button>
+                        <button class="btn btn-warning btn-lg">Поиск</button>
                     </div>
                 </div>
-                <div class="form-row" style="width: 100%; margin: 0; padding: 0 20px 0px 20px;">
+                <div class="form-row rowSearchMain">
                     <div class="form-group col-lg-6 d-none d-lg-block">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputCyti" class="col-form-label" style="color: white;">Местоположение</label>
+                                <label for="inputCyti" class="col-form-label">Местоположение</label>
                                 <input type="text" class="form-control" id="inputCyti">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="selectType" class="col-form-label" style="color: white;">Тип объявления</label>
+                                <label for="selectType" class="col-form-label">Тип объявления</label>
                                 <select class="form-control" id="selectType">
                                     <option>Любой</option>
                                     <option>Продается</option>
@@ -174,27 +174,27 @@
                     <div class="form-group col-lg-4 d-none d-lg-block">
                         <div class="form-row">
                             <div class="form-group col-md-5">
-                                <label for="inputPriceFrom" class="col-form-label" style="color: white;">Цена от</label>
+                                <label for="inputPriceFrom" class="col-form-label">Цена от</label>
                                 <input type="text" class="form-control" id="inputPriceFrom">
                             </div>
                             <div class="col-md-2 form-group d-flex align-items-end justify-content-center">
-                                <label class="col-form-label" style="color: white;">
-                                    <i class="fa fa-arrows-alt-h" style="color: #eee; font-size: x-large"></i>
+                                <label class="col-form-label">
+                                    <i class="fa fa-arrows-h"></i>
                                 </label>
                             </div>
                             <div class="form-group col-md-5">
-                                <label for="inputPriceTo" class="col-form-label" style="color: white;">Цена до</label>
+                                <label for="inputPriceTo" class="col-form-label">Цена до</label>
                                 <input type="text" class="form-control" id="inputPriceTo">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-row" style="width: 100%; height: 30px; padding: 0 20px 0 20px; margin: 0; border-top: 1px solid #eee; color: white; background-color: #0398db; border-radius: 0 0 4px 4px;">
-                    <div class="form-group col-md-6 d-flex justify-content-start">
-                        <a style="color: white; text-decoration: none;" href="#">Очистить поиск</a>
+                <div class="form-row rowSearchBottom">
+                    <div class="form-group col-6 col-md-6 d-flex justify-content-start">
+                        <a href="#">Очистить поиск</a>
                     </div>
-                    <div class="form-group col-md-6 d-flex justify-content-end">
-                        <a style="color: white; text-decoration: none;" href="#">Показать все</a>
+                    <div class="form-group col-6 col-md-6 d-flex justify-content-end">
+                        <a href="#">Показать все</a>
                     </div>
                 </div>
             </div>
@@ -325,7 +325,7 @@
     </div>
 <!--Блок объявлений и сервисов-->
     <div class="container">
-        <div class="row" style="margin-top: 30px;">
+        <div class="row">
             <div class="col-12 col-lg-9 goodsMain">
                 <h5>Последние объявления</h5>
                 <div class="row align-items-end">
@@ -386,7 +386,7 @@
         </div>
         <!--Блок Горячие запросы -->
         <div class="row">
-            <div class="col-12 fastSearch" style="padding-top: 30px;">
+            <div class="col-12 fastSearch">
                 <h5>Горячие запросы</h5>
                 <table class="table table-responsive-sm table-hover">
                     <thead>

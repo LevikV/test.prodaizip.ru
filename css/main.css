@@ -1,3 +1,6 @@
+html, body {
+    font-family: Roboto;
+}
 /*Бургер меню для маленьких экранов*/
 .navbar {
     background-color: #0398db;
@@ -28,6 +31,14 @@
     text-align: left;
     padding-left: 8px;
 }
+/*Блок меню*/
+.blockMenuMain {
+    margin-top: 20px;
+}
+.menus {
+    height: 40px;
+}
+
 /**/
 .fa-stack[data-count]:after{
     position:absolute;
@@ -44,9 +55,33 @@
     min-width:2em;
     font-weight:bold;
 }
-
-.menus {
-    height: 40px;
+/*Блок поиска на главной*/
+.blockSearchMain {
+    background: #03a9f4;
+    border-radius: 4px;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.blockSearchMain .btn {
+    width: 90%;
+}
+.blockSearchMain a {
+    color: white;
+    text-decoration: none;
+}
+.blockSearchMain i {
+    font-size: x-large;
+}
+.blockSearchMain label {
+    color: white;
+}
+.rowSearchMain {
+    width: 100%;
+    margin: 0;
+    padding: 0 20px 0px 20px;
+}
+.rowSearchBottom {
+    width: 100%; height: 30px; padding: 0 20px 0 20px; margin: 0; border-top: 1px solid #eee; color: white; background-color: #0398db; border-radius: 0 0 4px 4px;
 }
 /*Категории на главной*/
 .blockCategoryMain {
@@ -158,6 +193,9 @@
     color: #686868;
 }
 /*Объявления на главной*/
+.goodsMain {
+    margin-top: 30px;
+}
 .goodsMain p {
     margin: 0;
     padding: 0;
@@ -197,6 +235,9 @@ figure p {
     max-height: 170px;
 }
 /*Сервисы ProdaiZIP*/
+.serviceProdaiZIP {
+    margin-top: 30px;
+}
 .serviceProdaiZIP p {
     font-size: 0.8em;
 }
@@ -206,6 +247,9 @@ figure p {
     color: #0398db;
 }
 /*Блок быстрый поиск*/
+.fastSearch {
+    padding-top: 30px;
+}
 .fastSearch table {
     margin: 0 auto;
 }
@@ -280,6 +324,11 @@ figure p {
     padding-left: 20px;
 }
 /*Изменение элементов при изменении масштаба страницы*/
+@media (max-width: 766px) {
+    .blockSearchMain .btn {
+        width: 100%;
+    }
+}
 @media (max-width: 1200px) {
     .categoryMain {
         font-size: 2em;
