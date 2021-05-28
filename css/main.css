@@ -35,6 +35,68 @@ html, body {
 .blockMenuMain {
     margin-top: 20px;
 }
+.blockMenuMain .logo {
+    padding: 0;
+}
+.logo img {
+    height: 100%; width: auto;
+}
+.iconNotice {
+    padding: 0;
+}
+.iconNotice .fa-stack-2x {
+    color: #eee;
+}
+.iconNotice .fa-stack-1x {
+    color: dimgray;
+}
+.iconAd {
+    padding: 0;
+    border-right: 1px solid #eee;
+}
+.iconAd .fa-stack-2x {
+    color: #eee;
+}
+.iconAd .fa-stack-1x {
+    color: dimgray;
+}
+.loginMenu {
+    padding: 0px 0px 0px 5px;
+    margin: 0;
+}
+.loginMenu .btn {
+    padding: 0px;
+    width: 90%;
+    height: 80%;
+    border-radius: 12px;
+    background: white;
+    color: #0f6674;
+}
+.profileMenu {
+    padding: 0;
+}
+.profileMenu img {
+    width: 90%;
+    height: 90%;
+}
+.btnLoginMenu1 {
+    padding: 0;
+}
+.btnLoginMenu1 .btn {
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.btnLoginMenu2 {
+    padding: 0;
+}
+.btnLoginMenu2 .btn{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 .menus {
     height: 40px;
 }
