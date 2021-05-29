@@ -146,23 +146,71 @@ html, body {
     padding: 0 20px 0px 20px;
 }
 .rowSearchBottom {
-    width: 100%; height: 30px; padding: 0 20px 0 20px; margin: 0; border-top: 1px solid #eee; color: white; background-color: #0398db; border-radius: 0 0 4px 4px;
+    width: 100%;
+    height: 30px;
+    padding: 0 20px 0 20px;
+    margin: 0;
+    border-top: 1px solid #eee;
+    color: white;
+    background-color: #0398db;
+    border-radius: 0 0 4px 4px;
 }
 /*Категории на главной*/
+/*Стили для подкатегорий в модальном окне*/
 .modal {
+    margin-top: 10%;
+}
+.modal a {
+    float: left;
+    width: 50%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 0 8px 0;
+    padding: 0 4px;
+    line-height: 26px;
+    font-size: 13px;
+}
+.categoryDetailMain {
+    float: left;
+    position: relative;
+    padding: 10px 10px 10px 62px;
+    background-color: #b3b7bb;
+    border: 1px solid dimgray;
+    width: 100%;
+}
+.categoryDetailMain .icon {
+    position: absolute;
+    font-weight: 500;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 46px;
     text-align: center;
+    border-right: 1px solid dimgray;
 }
-.modal:before {
+.categoryDetailMain .icon i {
     display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
+    font-size: 20px;
+    line-height: 46px;
 }
-.modal-dialog {
+.modal .btn {
+    margin: 5px;
+}
+.modal .btn-icon {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.btn > .icon {
+    position: relative;
+    left: -0.75rem;
     display: inline-block;
-    text-align: left;
-    vertical-align: middle;
+    padding: .375rem .75rem;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: .25rem 0 0 .25rem;
 }
+
+/**/
 .blockCategoryMain {
     padding-top: 30px;
 }
@@ -420,6 +468,11 @@ figure p {
     padding-left: 20px;
 }
 /*Изменение элементов при изменении масштаба страницы*/
+@media (max-width: 992px) {
+    .modal a {
+        width: 100%;
+    }
+}
 @media (max-width: 766px) {
     .blockSearchMain .btn {
         width: 100%;
