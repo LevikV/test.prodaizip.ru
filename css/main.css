@@ -157,9 +157,7 @@ html, body {
 }
 /*Категории на главной*/
 /*Стили для подкатегорий в модальном окне*/
-.modal {
-    margin-top: 10%;
-}
+
 .modal-body a {
     float: left;
     width: 50%;
