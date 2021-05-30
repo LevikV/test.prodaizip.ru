@@ -4,7 +4,9 @@
 html, body {
     font-family: Roboto;
 }
-/*Бургер меню для маленьких экранов*/
+/**/
+/************************Бургер меню для маленьких экранов************************/
+/**/
 .navbar {
     background-color: #0398db;
 }
@@ -34,7 +36,30 @@ html, body {
     text-align: left;
     padding-left: 8px;
 }
-/*Блок меню*/
+/**/
+/************************Блок верхнего меню************************/
+/**/
+/*Переделанное верхнее меню для всех страниц*/
+.logo2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.menuTop span {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.menuTop a {
+    display: block;
+    float: left;
+}
+.menuTop .fa-stack-1x {
+    color: dimgray;
+}
+.menuTop .fa-stack-2x {
+    color: #eee;
+}
+/**/
 .blockMenuMain {
     margin-top: 20px;
 }
