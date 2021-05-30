@@ -40,24 +40,50 @@ html, body {
 /************************Блок верхнего меню************************/
 /**/
 /*Переделанное верхнее меню для всех страниц*/
-.logo2 {
-    position: absolute;
-    left: 0;
-    top: 0;
+
+.menu_top {
+    padding: 20px 0 0 0;
+    vertical-align: middle;
 }
-.menuTop span {
+.menu_top span {
     margin-left: 5px;
     margin-right: 5px;
 }
-.menuTop a {
-    display: block;
-    float: left;
+.menu_top a {
+    display: inline-block;
+    float: right;
 }
-.menuTop .fa-stack-1x {
+.menu_top .fa-stack-1x {
     color: dimgray;
 }
-.menuTop .fa-stack-2x {
+.menu_top .fa-stack-2x {
     color: #eee;
+}
+.menu_top .logo2 {
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+.menu_top .profileimg {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-left: 8px;
+    margin-right: 15px;
+}
+.menu_top .btn-info {
+    background: white;
+    color: black;
+    height: 30px;
+    border-radius: 20px;
+    margin-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 0;
+}
+.menu_top .btn-danger {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 0;
 }
 /**/
 .blockMenuMain {
