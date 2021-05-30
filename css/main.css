@@ -157,8 +157,7 @@ html, body {
 }
 /*Категории на главной*/
 /*Стили для подкатегорий в модальном окне*/
-
-.modal-body a {
+.modalCategoryDetail a {
     float: left;
     width: 50%;
     white-space: nowrap;
@@ -168,6 +167,12 @@ html, body {
     padding: 0 4px;
     line-height: 26px;
     font-size: 13px;
+    color: white;
+}
+.modalCategoryDetail .icon i {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 46px;
     color: white;
 }
 .categoryDetailMain {
@@ -190,29 +195,18 @@ html, body {
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-.categoryDetailMain .icon i {
-    display: inline-block;
-    font-size: 20px;
-    line-height: 46px;
-    color: white;
+.btnAddAd {
+    background-color: #28a745;
 }
-
-.modal .btn {
-    margin: 5px;
+.btnAddAd .icon {
+    background-color: #1c7430;
 }
-.modal .btn-icon {
-    padding-top: 0;
-    padding-bottom: 0;
+.btnAddFastSearch {
+    background-color: #c82333;
 }
-.btn > .icon {
-    position: relative;
-    left: -0.75rem;
-    display: inline-block;
-    padding: .375rem .75rem;
-    background: rgba(0, 0, 0, 0.15);
-    border-radius: .25rem 0 0 .25rem;
+.btnAddFastSearch .icon {
+    background-color: #b21f2d;
 }
-
 /**/
 .blockCategoryMain {
     padding-top: 30px;
@@ -306,20 +300,20 @@ html, body {
 .categoryMainRashodka .fa-stack:hover .fa-circle {
     color: deeppink;
 }
-.categoryMainRashodka .fa-stack:hover .fa-cogs {
+.categoryMainRashodka .fa-stack:hover .fa-leaf {
     color: white;
 }
-.categoryMainRashodka .fa-stack .fa-cogs {
+.categoryMainRashodka .fa-stack .fa-leaf {
     color: deeppink;
 }
 /**/
 .categoryMainOther .fa-stack:hover .fa-circle {
     color: #686868;
 }
-.categoryMainOther .fa-stack:hover .fa-plug {
+.categoryMainOther .fa-stack:hover .fa-spinner {
     color: white;
 }
-.categoryMainOther .fa-stack .fa-plug {
+.categoryMainOther .fa-stack .fa-spinner {
     color: #686868;
 }
 /*Объявления на главной*/
@@ -374,7 +368,23 @@ figure p {
 .serviceProdaiZIP i {
     padding-top: 5px;
     font-size: 2.2em;
+}
+.serviceProdaiZIP a:hover p {
+    font-weight: bold;
+}
+.serviceFastSearch a {
+    color: #c82333;
+    text-decoration: none;
+}
+.serviceFastSearch a p {
+    color: black;
+}
+.serviceSafeSdelka a {
     color: #0398db;
+    text-decoration: none;
+}
+.serviceSafeSdelka a p {
+    color: black;
 }
 /*Блок быстрый поиск*/
 .fastSearch {
