@@ -11,6 +11,7 @@
 /*Блок доступных категорий*/
 .permiss_category {
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 .permiss_category a {
     text-decoration: none;
@@ -25,3 +26,20 @@
     font-size: 0.7em;
     white-space: nowrap;
 }
+/*Блок фильтров категорий и объявлений из категории*/
+.category_filter {
+    background: #0398db;
+    border-radius: 4px;
+}
+.category_filter .btn-warning {
+    width: 100%;
+}
+.category_filter label {
+    color: white;
+    padding-top: 8px;
+    margin-bottom: 0;
+}
+.checkSafeTrade {
+    margin-top: 15px;
+}
+/**/

@@ -49,6 +49,9 @@ html, body {
     padding-bottom: 11px;
     border-right: 1px solid #eee;
 }
+.menu_top a {
+    text-decoration: none;
+}
 .menu_top span {
     margin-left: 3px;
     margin-right: 3px;
