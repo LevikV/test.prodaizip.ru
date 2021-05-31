@@ -183,47 +183,66 @@
 <!--Блок фильтров и объявлений-->
 <div class="container">
     <div class="row">
-        <div class="col-3 category_filter">
-            <form>
-                <label for="typePrinter">Технология печати</label>
-                <select class="form-control form-control-sm" id="typePrinter">
-                    <option>Лазерный</option>
-                    <option>Струйный</option>
-                    <option>Матричный</option>
-                    <option>Все</option>
-                </select>
-                <label for="statusWork">Состояние</label>
-                <select class="form-control form-control-sm" id="statusWork">
-                    <option>Работает</option>
-                    <option>Не работает</option>
-                    <option>Все</option>
-                </select>
-                <label for="brand">Брэнд принтера</label>
-                <select class="form-control form-control-sm" id="brand">
-                    <option>HP</option>
-                    <option>Canon</option>
-                    <option>Brother</option>
-                    <option>Samsung</option>
-                </select>
-                <label for="model">Модель принтера</label>
-                <select class="form-control form-control-sm" id="model">
-                    <option>LJ 1010</option>
-                    <option>LJ 1200</option>
-                    <option>LJ m1132</option>
-                </select>
-                <label for="typeAd">Тип объявления</label>
-                <select class="form-control form-control-sm" id="typeAd">
-                    <option>Продажа</option>
-                    <option>Покупка</option>
-                    <option>Все</option>
-                </select>
-                <input type="checkbox" class="checkSafeTrade" id="safeTrade">
-                <label for="safeTrade">Безопасная сделка</label>
-                <button type="submit" class="btn btn-warning">Показать</button>
-            </form>
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12 category_filter">
+                    <form>
+                        <label for="typePrinter">Технология печати</label>
+                        <select class="form-control form-control-sm" id="typePrinter">
+                            <option>Лазерный</option>
+                            <option>Струйный</option>
+                            <option>Матричный</option>
+                            <option>Все</option>
+                        </select>
+                        <label for="statusWork">Состояние</label>
+                        <select class="form-control form-control-sm" id="statusWork">
+                            <option>Работает</option>
+                            <option>Не работает</option>
+                            <option>Все</option>
+                        </select>
+                        <label for="brand">Брэнд принтера</label>
+                        <select class="form-control form-control-sm" id="brand">
+                            <option>HP</option>
+                            <option>Canon</option>
+                            <option>Brother</option>
+                            <option>Samsung</option>
+                        </select>
+                        <label for="model">Модель принтера</label>
+                        <select class="form-control form-control-sm" id="model">
+                            <option>LJ 1010</option>
+                            <option>LJ 1200</option>
+                            <option>LJ m1132</option>
+                        </select>
+                        <label for="typeAd">Тип объявления</label>
+                        <select class="form-control form-control-sm" id="typeAd">
+                            <option>Продажа</option>
+                            <option>Покупка</option>
+                            <option>Все</option>
+                        </select>
+                        <input type="checkbox" class="checkSafeTrade" id="safeTrade">
+                        <label for="safeTrade">Безопасная сделка</label>
+                        <button type="submit" class="btn btn-warning">Показать</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 banner_category_left">
+                    Блок под баннерную рекламу
+                </div>
+            </div>
         </div>
         <div class="col-9 category_ads">
-            Объявления
+            <div class="row">
+                <div class="col-12">
+                    Значки типа отображения и сортировки объявлений
+                </div>
+                <div class="col-12">
+                    Сами объявления
+                </div>
+            </div>
+        </div>
+        <div class="col-12 banner_category_footer">
+            Блок под баннерную рекламу
         </div>
     </div>
 </div>

@@ -20,6 +20,9 @@
     margin-right: 15px;
     white-space: nowrap;
 }
+.permiss_category a:hover {
+    color: #0398db;
+}
 .permiss_category span {
     padding-left: 10px;
     color: gray;
@@ -33,6 +36,8 @@
 }
 .category_filter .btn-warning {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 .category_filter label {
     color: white;
@@ -43,3 +48,15 @@
     margin-top: 15px;
 }
 /**/
+.banner_category_footer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: white;
+}
+.banner_category_left {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: white;
+}
