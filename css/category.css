@@ -1,0 +1,27 @@
+/*Блок поиска*/
+.search_category {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0px;
+    background-color: #0398db;
+    border-radius: 4px;
+}
+/*Блок доступных категорий*/
+.permiss_category {
+    margin-top: 30px;
+}
+.permiss_category a {
+    text-decoration: none;
+    color: gray;
+    font-size: 0.9em;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+.permiss_category span {
+    padding-left: 10px;
+    color: gray;
+    font-size: 0.7em;
+    white-space: nowrap;
+}

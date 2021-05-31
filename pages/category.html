@@ -10,6 +10,7 @@
 
     <!-- Корректировка стиля. -->
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/category.css">
 
     <title>Доска объявлений №1 по продаже оргтехники</title>
 </head>
@@ -88,9 +89,8 @@
     </div>
 </nav>
 
-<!--Основной контент сайта-->
+<!--Верхнее меню-->
 <div class="container">
-    <!--Верхнее меню-->
     <div class="row">
         <div class="d-none d-md-block col-md-12 text-right menu_top align-items-center">
             <a href="#">
@@ -140,79 +140,46 @@
             </a>
         </div>
     </div>
+</div>
+<!--Основной контент сайта-->
 <!--Блок поиска-->
-    <form>
-        <div class="row blockSearchMain">
-            <div class="form-row rowSearchMain">
-                <div class="form-group col-md-6">
-                    <label for="inputZapros" class="col-form-label col-form-label-lg">Что вы ищете</label>
-                    <input type="text" class="form-control form-control-lg" id="inputZapros" placeholder="Плата форматера для HP P1005">
-                </div>
-                <div class="form-group col-md-4">
-                    <label for="selectCategory" class="col-form-label col-form-label-lg">Категория</label>
-                    <select class="form-control form-control-lg" id="selectCategory">
-                        <option>Принтеры/копиры</option>
-                        <option>--Продажа принтеров/копиров</option>
-                        <option>--Принтеры/копиры на запчасти</option>
-                        <option>--Запчасти для принтеров/копиров</option>
-                        <option>----Блоки лазера/сканера/Сканирующие линейки</option>
-                        <option>----Блоки питания</option>
-                        <option>----Блоки проявки</option>
-                    </select>
-                </div>
-                <div class="form-group col-md-2 align-items-end justify-content-end d-flex">
-                    <button class="btn btn-warning btn-lg">Поиск</button>
-                </div>
+<div class="container">
+    <form action="#">
+        <div class="form-row search_category">
+            <div class="col-3">
+                <select class="form-control form-control" id="selectCategory">
+                    <option>Принтеры/копиры</option>
+                    <option>--Продажа принтеров/копиров</option>
+                    <option>--Принтеры/копиры на запчасти</option>
+                    <option>--Запчасти для принтеров/копиров</option>
+                    <option>----Блоки лазера/сканера/Сканирующие линейки</option>
+                    <option>----Блоки питания</option>
+                    <option>----Блоки проявки</option>
+                </select>
             </div>
-            <div class="form-row rowSearchMain">
-                <div class="form-group col-lg-6 d-none d-lg-block">
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCyti" class="col-form-label">Местоположение</label>
-                            <input type="text" class="form-control" id="inputCyti">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="selectType" class="col-form-label">Тип объявления</label>
-                            <select class="form-control" id="selectType">
-                                <option>Любой</option>
-                                <option>Продается</option>
-                                <option>Покупается</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group col-lg-4 d-none d-lg-block">
-                    <div class="form-row">
-                        <div class="form-group col-md-5">
-                            <label for="inputPriceFrom" class="col-form-label">Цена от</label>
-                            <input type="text" class="form-control" id="inputPriceFrom">
-                        </div>
-                        <div class="col-md-2 form-group d-flex align-items-end justify-content-center">
-                            <label class="col-form-label">
-                                <i class="fa fa-arrows-h"></i>
-                            </label>
-                        </div>
-                        <div class="form-group col-md-5">
-                            <label for="inputPriceTo" class="col-form-label">Цена до</label>
-                            <input type="text" class="form-control" id="inputPriceTo">
-                        </div>
-                    </div>
-                </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Что вы ищете">
             </div>
-            <div class="form-row rowSearchBottom">
-                <div class="form-group col-6 col-md-6 d-flex justify-content-start">
-                    <a href="#">Очистить поиск</a>
-                </div>
-                <div class="form-group col-6 col-md-6 d-flex justify-content-end">
-                    <a href="#">Показать все</a>
-                </div>
+            <div class="col-2">
+                <input type="text" class="form-control" placeholder="Местоположение">
+            </div>
+            <div class="col-1">
+                <button type="submit" class="btn btn-warning">Поиск</button>
             </div>
         </div>
     </form>
 </div>
-<!---->
-<!--Блок объявлений и сервисов-->
-
+<!--Допустимые категории-->
+<div class="container">
+    <div class="row permiss_category">
+        <div class="col-12">
+            <a href="#">Продажа принтеров / копиров</a>
+            <a href="#">Принтеры / копиры на запчасти</a>
+            <a href="#">Запчасти для принтеров / копиров</a>
+            <h1>Продажа принтеров / копиров<span>24224 шт.</span></h1>
+        </div>
+    </div>
+</div>
 
 <!--Подвал сайта-->
 <div class="container-fluid podval">
