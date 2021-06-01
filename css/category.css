@@ -48,8 +48,22 @@
     margin-top: 15px;
 }
 /***************Блок объявлений*********************/
-.ads_main .card {
-    width: 14rem;
+.category_ads .card {
+    border: none;
+}
+.category_ads .card-body {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background: #eee;
+}
+.category_ads .card-footer {
+    background: white;
+    padding: 15px 0;
+}
+.category_ads .card img {
+    max-width: 100%;
+    height: auto;
 }
 
 /*Разметка блоков под баннерную рекламу*/
