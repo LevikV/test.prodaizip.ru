@@ -48,22 +48,46 @@
     margin-top: 15px;
 }
 /***************Блок объявлений*********************/
+.category_ads .col {
+padding: 5px;
+}
+.wrapper {
+    width: 205px;
+    height: 160px;
+}
+.exmpl {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exmpl img {
+    height: 100%;
+    width: auto;
+}
+
+
+
+
+/**/
 .category_ads .card {
     border: none;
+    max-height: 18rem;
 }
 .category_ads .card-body {
     display: flex;
     align-items: center;
     padding: 0;
     background: #eee;
+
 }
 .category_ads .card-footer {
     background: white;
     padding: 15px 0;
 }
 .category_ads .card img {
-    max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    width: auto;
 }
 
 /*Разметка блоков под баннерную рекламу*/
