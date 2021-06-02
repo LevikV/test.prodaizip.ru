@@ -48,6 +48,45 @@
     margin-top: 15px;
 }
 /***************Блок объявлений*********************/
+/*Строка выбора сортировки*/
+.sort {
+    padding: 0 0 20px 0;
+}
+/*Платная услуга для объявлений - VIP*/
+.vip {
+    border-radius: 4px;
+    box-shadow: 0 0 8px #c69500;
+}
+.vip a h6 {
+    color: white;
+    background-color: #0398db;
+}
+.vip a:hover h6 {
+    color: #0398db;
+    background-color: white;
+}
+.vip .ads_buy {
+    color: #c82333;
+}
+.vip .ads_sell {
+    color: #28a745;
+}
+/*Платная услуга для объявлений - выделение цветом*/
+.highlight a h6 {
+    color: white;
+    background-color: #0398db;
+}
+.highlight a:hover h6 {
+    color: #0398db;
+    background-color: white;
+}
+.highlight .ads_buy {
+    color: #c82333;
+}
+.highlight .ads_sell {
+    color: #28a745;
+}
+/**/
 .ads {
     padding: 10px;
     overflow: hidden;
@@ -87,8 +126,8 @@
     text-overflow: ellipsis;
 }
 .ads_wrapper {
-    width: 205px;
-    height: 160px;
+    width: 190px;
+    height: 150px;
     overflow: hidden;
     display: flex;
     justify-content: center;

@@ -190,19 +190,54 @@
                     <form>
                         <label for="typePrinter">Технология печати</label>
                         <select class="form-control form-control-sm" id="typePrinter">
+                            <option></option>
                             <option>Лазерный</option>
                             <option>Струйный</option>
                             <option>Матричный</option>
-                            <option>Все</option>
+                        </select>
+                        <label for="chromaticity">Цветность</label>
+                        <select class="form-control form-control-sm" id="chromaticity">
+                            <option></option>
+                            <option>Черно-белый</option>
+                            <option>Цветной</option>
+                        </select>
+                        <label for="typePrint">Тип устройства</label>
+                        <select class="form-control form-control-sm" id="typePrint">
+                            <option></option>
+                            <option>Принтер</option>
+                            <option>МФУ</option>
+                            <option>Копир</option>
+                        </select>
+                        <label for="printFormat">Макс. формат печати</label>
+                        <select class="form-control form-control-sm" id="printFormat">
+                            <option></option>
+                            <option>A4</option>
+                            <option>A3</option>
+                            <option>A2</option>
+                            <option>A1</option>
+                            <option>Другой</option>
+                        </select>
+                        <label for="autoFeeder">Автоподатчик оригиналов</label>
+                        <select class="form-control form-control-sm" id="autoFeeder">
+                            <option></option>
+                            <option>Есть</option>
+                            <option>Нет</option>
+                        </select>
+                        <label for="duplex">Двусторонняя печать</label>
+                        <select class="form-control form-control-sm" id="duplex">
+                            <option></option>
+                            <option>Есть</option>
+                            <option>Нет</option>
                         </select>
                         <label for="statusWork">Состояние</label>
                         <select class="form-control form-control-sm" id="statusWork">
+                            <option></option>
                             <option>Работает</option>
                             <option>Не работает</option>
-                            <option>Все</option>
                         </select>
                         <label for="brand">Брэнд принтера</label>
                         <select class="form-control form-control-sm" id="brand">
+                            <option></option>
                             <option>HP</option>
                             <option>Canon</option>
                             <option>Brother</option>
@@ -210,15 +245,16 @@
                         </select>
                         <label for="model">Модель принтера</label>
                         <select class="form-control form-control-sm" id="model">
+                            <option></option>
                             <option>LJ 1010</option>
                             <option>LJ 1200</option>
                             <option>LJ m1132</option>
                         </select>
                         <label for="typeAd">Тип объявления</label>
                         <select class="form-control form-control-sm" id="typeAd">
+                            <option></option>
                             <option>Продажа</option>
                             <option>Покупка</option>
-                            <option>Все</option>
                         </select>
                         <input type="checkbox" class="checkSafeTrade" id="safeTrade">
                         <label for="safeTrade">Безопасная сделка</label>
@@ -233,7 +269,19 @@
             </div>
         </div>
 <!--Основной блок объявлений-->
-        <div class="col-9">
+        <div class="col-9" style="padding-left: 25px">
+            <div class="row justify-content-end sort">
+                <div class="col-6 col-sm-5 col-md-5 col-lg-3">
+                    <form action="#">
+                        <select class="form-control form-control-sm" id="typePrinter">
+                            <option>По возрастанию цены</option>
+                            <option>По убванию цены</option>
+                            <option>По дате</option>
+                            <option>Все</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
                 <div class="col ads">
                     <div class="ads_wrapper">
@@ -246,7 +294,7 @@
                             <h6>Продам принтер HP 1010 как новый!</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 3230 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 3230 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
 
                             <p class="address"> г. Самара, ул. Красногвардейская дом 20</p>
                             <p class="time">Сегодня, 11:34</p>
@@ -254,7 +302,7 @@
 
                     </div>
                 </div>
-                <div class="col ads">
+                <div class="col ads vip">
                     <div class="ads_wrapper">
                         <a href="#" title="Струйник L800 для печати фотографий">
                             <img src="../img/print_str.jpg">
@@ -265,7 +313,7 @@
                             <h6>Куплю L800 для печати фотографий</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 6000 руб.<span><i class="fa fa-search"></i></span></p>
+                            <p class="price"> 6000 руб.<span class="ads_buy"><i class="fa fa-search"></i></span></p>
                             <p class="address"> г. Хабаровск</p>
                             <p class="time">Сегодня, 08:42</p>
                         </a>
@@ -283,7 +331,7 @@
                             <h6>Samsung SCX-4200 как новый</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 2500 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 2500 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
                             <p class="address"> г. Москва</p>
                             <p class="time">01.06.2021</p>
                         </a>
@@ -301,7 +349,7 @@
                             <h6>Ноутбук Acer, рабочий, разбита матрица</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 4000 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 4000 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
                             <p class="address"> г. Владивосток, ул. Шоссейная</p>
                             <p class="time">01.06.2021</p>
                         </a>
@@ -319,7 +367,7 @@
                             <h6>Кнопочный Nokia, как новый</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 500 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 500 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
                             <p class="address"> г. Москва</p>
                             <p class="time">30.05.2021</p>
                         </a>
@@ -337,14 +385,14 @@
                             <h6>Телефон Huawei, на гарантии!</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 1500 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 1500 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
                             <p class="address"> г. Новосибирск, ул. Адмирала-Маршала, дом 43</p>
                             <p class="time">29.05.2021</p>
                         </a>
 
                     </div>
                 </div>
-                <div class="col ads">
+                <div class="col ads highlight">
                     <div class="ads_wrapper">
                         <a href="#" title="Раскладушка Motorolla, очень хорошо ловит сввязь">
                             <img src="../img/phone_2.jpg">
@@ -355,7 +403,7 @@
                             <h6>Раскладушка Motorolla, очень хорошо ловит сввязь</h6>
                         </a>
                         <a href="#">
-                            <p class="price"> 1000 руб.<span><i class="fa fa-legal"></i></span></p>
+                            <p class="price"> 1000 руб.<span class="ads_sell"><i class="fa fa-legal"></i></span></p>
                             <p class="address"> г. Хабаровск</p>
                             <p class="time">28.05.2021</p>
                         </a>
