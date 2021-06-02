@@ -48,9 +48,32 @@
     margin-top: 15px;
 }
 /***************Блок объявлений*********************/
-/*Строка выбора сортировки*/
+.block_ads {
+    padding-left: 25px
+}
+/*Блок VIP объявлений*/
+.block_vip_ads {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+/*Строка выбора сортировки, количества и вида отображения*/
 .sort {
     padding: 0 0 20px 0;
+}
+
+.select_views {
+    text-align: right;
+}
+.select_views a {
+    text-decoration: none;
+}
+.select_views span {
+    color: #686868;
+    font-size: 1.6em;
+    margin-left: 10px;
+    width: 26px;
+    height: 26px;
 }
 /*Платная услуга для объявлений - VIP*/
 .vip {
