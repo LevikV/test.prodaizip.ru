@@ -1,0 +1,101 @@
+/*Платная услуга для объявлений - VIP*/
+.vip {
+
+    border: 2px solid #0398db; !important;
+}
+.vip a h6 {
+    color: white;
+    background-color: #0398db;
+}
+.vip a:hover h6 {
+    color: #0398db;
+    background-color: white;
+}
+.vip .ads_buy {
+    color: #c82333;
+}
+.vip .ads_sell {
+    color: #28a745;
+}
+/*Платная услуга для объявлений - выделение цветом*/
+.highlight a h6 {
+    color: white;
+    background-color: #0398db;
+}
+.highlight a:hover h6 {
+    color: #0398db;
+    background-color: white;
+}
+.highlight .ads_buy {
+    color: #c82333;
+}
+.highlight .ads_sell {
+    color: #28a745;
+}
+/**/
+.ads:hover {
+    background-color: #eee;
+}
+.ads {
+    padding: 10px;
+    overflow: hidden;
+}
+.ads a {
+    text-decoration: none;
+}
+.ads a:hover h6 {
+    color: #c82333;
+}
+.ads h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #0398db;
+    margin: 2px 0;
+    font-size: 0.9em;
+}
+.ads span {
+    padding-left: 15px;
+    color: #686868;
+}
+.ads p {
+    padding: 0;
+    margin: 0;
+    color: #686868;
+    font-size: 0.8em;
+}
+.ads .price {
+    color: black;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.ads .address {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ads_wrapper {
+    width: 190px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ads_wrapper a {
+    display: contents;
+}
+.ads_wrapper a img {
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+/* Вид отображения списком*/
+.ads_list {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.ads_list .ads_wrapper {
+    float: left;
+    margin-right: 30px;
+}
