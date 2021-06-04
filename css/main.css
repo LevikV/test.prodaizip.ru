@@ -199,44 +199,6 @@
 .goodsMain {
     margin-top: 30px;
 }
-.goodsMain p {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-}
-.goodsMain h6 {
-    margin: 0;
-    padding: 0;
-}
-figure {
-    overflow: hidden;
-
-}
-figure h6 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #0398db;
-}
-figure p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.goodsMain .city {
-    color: #686868;
-}
-.goodsMain .dateTime {
-    color: #686868;
-}
-.goodsMain .price {
-    font-weight: bold;
-}
-.goodsMain img {
-    height: 100%;
-    width: auto;
-    max-height: 170px;
-}
 /*Сервисы ProdaiZIP*/
 .serviceProdaiZIP {
     margin-top: 30px;
