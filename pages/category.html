@@ -186,9 +186,25 @@
     <div class="row">
 <!--Блок фильтров-->
         <div class="col-12 col-sm-4 col-md-3 col-lg-3 order-1 order-sm-0">
-            <div class="row">
-                <div class="col-12 category_filter">
-                    <form>
+            <form>
+                <div class="row">
+                    <div class="col-12 filter_caption">
+                        <p>Тип объявления</p>
+                    </div>
+                    <div class="col-12 category_filter">
+                        <label for="typeAd">Тип объявления</label>
+                        <select class="form-control form-control-sm" id="typeAd">
+                            <option></option>
+                            <option>Продажа</option>
+                            <option>Покупка</option>
+                        </select>
+                        <input type="checkbox" class="checkSafeTrade" id="safeTrade">
+                        <label for="safeTrade">Безопасная сделка</label>
+                    </div>
+                    <div class="col-12 filter_caption">
+                        <p>Параметры устройства</p>
+                    </div>
+                    <div class="col-12 category_filter">
                         <label for="typePrinter">Технология печати</label>
                         <select class="form-control form-control-sm" id="typePrinter">
                             <option></option>
@@ -236,6 +252,11 @@
                             <option>Работает</option>
                             <option>Не работает</option>
                         </select>
+                    </div>
+                    <div class="col-12 filter_caption">
+                        <p>Модель устройства</p>
+                    </div>
+                    <div class="col-12 category_filter">
                         <label for="brand">Брэнд принтера</label>
                         <select class="form-control form-control-sm" id="brand">
                             <option></option>
@@ -251,18 +272,12 @@
                             <option>LJ 1200</option>
                             <option>LJ m1132</option>
                         </select>
-                        <label for="typeAd">Тип объявления</label>
-                        <select class="form-control form-control-sm" id="typeAd">
-                            <option></option>
-                            <option>Продажа</option>
-                            <option>Покупка</option>
-                        </select>
-                        <input type="checkbox" class="checkSafeTrade" id="safeTrade">
-                        <label for="safeTrade">Безопасная сделка</label>
+                    </div>
+                    <div class="col-12 filter_caption">
                         <button type="submit" class="btn btn-warning">Показать</button>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </form>
             <div class="row">
                 <div class="col-12 banner_category_left">
                     Блок под баннерную рекламу

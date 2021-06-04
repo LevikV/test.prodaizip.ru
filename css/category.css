@@ -41,10 +41,7 @@
 .category_filter {
     background: #0398db;
     border-radius: 4px;
-}
-.category_filter .btn-warning {
-    width: 100%;
-    margin-top: 20px;
+    padding-bottom: 15px;
     margin-bottom: 15px;
 }
 .category_filter label {
@@ -54,6 +51,19 @@
 }
 .checkSafeTrade {
     margin-top: 15px;
+}
+.filter_caption {
+    padding: 0;
+}
+.filter_caption p {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.filter_caption .btn-warning {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 /***************Блок объявлений*********************/
 .block_ads {

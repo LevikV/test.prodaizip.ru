@@ -1,7 +1,7 @@
 /*Платная услуга для объявлений - VIP*/
 .vip {
 
-    border: 2px solid #0398db; !important;
+    box-shadow: 0 0 6px gray;
 }
 .vip a h6 {
     color: white;
