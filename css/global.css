@@ -131,6 +131,31 @@ html, body {
     font-weight:bold;
 }
 /**/
+/************************ Общий контент для всех страниц ************************/
+/**/
+/* Хлебные крошки */
+.breadcrumb {
+    background: none;
+    margin-top: 20px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: gray;
+    margin-right: 5px;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.breadcrumb a:hover {
+    color: #0398db;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: '>';
+}
+
+
+
+
+/**/
 /************************Подвал сайта************************/
 /**/
 .podval {

@@ -15,6 +15,13 @@
     padding-top: 3px;
     padding-bottom: 3px;
 }
+/* Заголовок общего блока для страницы - общее количество объявлений*/
+h1>span {
+    padding-left: 10px;
+    color: gray;
+    font-size: 0.7em;
+    white-space: nowrap;
+}
 
 /********************Блок доступных категорий********************/
 .permiss_category {
