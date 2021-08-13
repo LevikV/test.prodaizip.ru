@@ -105,7 +105,7 @@
                     <i class="fa fa-star fa-stack-1x"></i>
                 </span>
                 </a>
-                <a href="#" class="btn btn-info">
+                <a href="#auth_modal" class="btn btn-info" data-toggle="modal">
                     Войти
                 </a>
                 <a href="#" class="profileimg">
@@ -114,6 +114,65 @@
                 <a href="#" class="btn btn-danger">
                     Подать объявление
                 </a>
+            </div>
+            <!-- Модальное окно для авторизации/регистрации -->
+            <div id="auth_modal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <ul class="nav nav-pills justify-content-center">
+                                <li class="nav-item">
+                                    <a href="#auth_tab_modal" class="nav-link active" data-toggle="tab">
+                                        Войти с паролем
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#register_tab_modal" class="nav-link" data-toggle="tab">
+                                        Регистрация
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="auth_tab_modal">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="input_login" class="col-form-label">
+                                                Телефон или e-mail
+                                            </label>
+                                            <input type="text" id="input_login" class="form-control" placeholder="Телефон или e-mail">
+                                            <label for="input_password" class="col-form-label">
+                                                Пароль
+                                            </label>
+                                            <input type="password" id="input_password" class="form-control" placeholder="Пароль">
+                                        </div>
+                                        <button type="submit" title="Войти с паролем" class="btn btn-primary">
+                                            Войти с паролем
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="register_tab_modal">
+                                    <form action="">
+                                        <div class="form-group">
+                                            <label for="input_login_new" class="col-form-label">
+                                                Телефон или e-mail
+                                            </label>
+                                            <input type="text" id="input_login_new" class="form-control" placeholder="Телефон или e-mail">
+                                        </div>
+                                        <button type="submit" title="Выслать СМС/Письмо с паролем" class="btn btn-primary">
+                                            Выслать СМС/Письмо с паролем
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#">Напомнить пароль</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 <!--Блок поиска-->
