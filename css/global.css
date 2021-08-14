@@ -5,6 +5,7 @@ html, body {
     font-family: Roboto;
 }
 
+
 /**/
 /************************Бургер меню для маленьких экранов************************/
 /**/
@@ -136,7 +137,8 @@ html, body {
 /* Хлебные крошки */
 .breadcrumb {
     background: none;
-    margin-top: 20px;
+    margin: 20px 0;
+    padding: 0;
 }
 .breadcrumb a {
     text-decoration: none;
@@ -151,6 +153,23 @@ html, body {
 .breadcrumb-item+.breadcrumb-item::before {
     content: '>';
 }
+/* Блок Поиска простой (на всех страницах, кроме главной и детального поиска) */
+.search {
+    margin-top: 25px;
+    padding: 3px 1px;
+    background-color: #0398db;
+    border-radius: 4px;
+}
+.search>div {
+    padding: 5px;
+}
+@media (min-width: 992px) {
+    .search_btn-search {
+        width: 100%;
+    }
+}
+/**/
+
 
 
 

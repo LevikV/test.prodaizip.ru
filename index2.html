@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- Подключаем иконочный шрифт FontAwesome 4-ой версии. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+    <!-- Корректировка стиля. -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ads_views.css">
+
+    <title>Доска объявлений №1 по продаже оргтехники</title>
+</head>
+<body>
+
+<!--Меню для маленьких экранов-->
+<nav class="navbar d-md-none navbar-expand-md navbar-dark sticky-top">
+    <div class="container-fluid">
+        <a href="#" class="navbar-brand">ProdaiZIP.ru</a>
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#search">
+            <i class="fa fa-search"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
+            <i class="fa fa-user"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <i class="fa fa-list"></i>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="search">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <form class="form">
+                    <label for="searchInput">Что вы ищете</label>
+                    <input id="searchInput" class="form-control " type="search" placeholder="Введите слово для поиска">
+                    <label for="searchCategory">Категория</label>
+                    <select class="form-control" id="searchCategory">
+                        <option>Принтеры/копиры</option>
+                        <option>Телефоны</option>
+                        <option>Планшеты</option>
+                        <option>Ноутбуки</option>
+                        <option>Мониторы/телевизоры</option>
+                        <option>Компьютеры/комплектующие</option>
+                        <option>Расходные материалы</option>
+                        <option>Прочее</option>
+                    </select>
+                    <label for="searchCity">Местоположение</label>
+                    <input id="searchCity" class="form-control " type="text" placeholder="Город">
+                    <button class="btn btn-success" type="submit">Поиск</button>
+                    <button class="btn btn-danger" type="submit">Сброс</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="profile">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Войти</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Зарегистрироваться</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+            <div class="menuMobile">
+                <a class="nav-link btn btn-success btn-sm" href="#"><i class="fa fa-plus-circle"></i> Добавить объявление</a>
+                <a class="nav-link btn btn-sm btn-danger" href="#"><i class="fa fa-plus-circle"></i> Добавить горячий запрос</a>
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все объявления</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Услуги</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Обратная связь</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О компании</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--Основной контент сайта-->
+<!--Верхнее меню-->
+<div class="container">
+    <div class="row">
+        <div class="d-none d-md-block col-md-12 text-right menu_top align-items-center">
+            <a href="#">
+                <img class="logo2" src="/img/logo.png" alt="ProdaiZip.ru">
+            </a>
+
+            <a href="#" class="notice">
+                <span class="fa-stack fa-1x" data-count="0">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-star fa-stack-1x"></i>
+                </span>
+            </a>
+            <a href="#auth_modal" class="btn btn-info" data-toggle="modal">
+                Войти
+            </a>
+            <a href="#" class="profileimg">
+                <img src="/img/profile-default.png" alt="Профиль">
+            </a>
+            <a href="#" class="btn btn-danger">
+                Подать объявление
+            </a>
+        </div>
+        <!-- Модальное окно для авторизации/регистрации -->
+        <div id="auth_modal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <ul class="nav nav-pills justify-content-center">
+                            <li class="nav-item">
+                                <a href="#auth_tab_modal" class="nav-link active" data-toggle="tab">
+                                    Войти с паролем
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#register_tab_modal" class="nav-link" data-toggle="tab">
+                                    Регистрация
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="auth_tab_modal">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="input_login" class="col-form-label">
+                                            Телефон или e-mail
+                                        </label>
+                                        <input type="text" id="input_login" class="form-control" placeholder="Телефон или e-mail">
+                                        <label for="input_password" class="col-form-label">
+                                            Пароль
+                                        </label>
+                                        <input type="password" id="input_password" class="form-control" placeholder="Пароль">
+                                    </div>
+                                    <button type="submit" title="Войти с паролем" class="btn btn-primary">
+                                        Войти с паролем
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="register_tab_modal">
+                                <form action="">
+                                    <div class="form-group">
+                                        <label for="input_login_new" class="col-form-label">
+                                            Телефон или e-mail
+                                        </label>
+                                        <input type="text" id="input_login_new" class="form-control" placeholder="Телефон или e-mail">
+                                    </div>
+                                    <button type="submit" title="Выслать СМС/Письмо с паролем" class="btn btn-primary">
+                                        Выслать СМС/Письмо с паролем
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#">Напомнить пароль</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Блок поиска-->
+<div class="container">
+    <form>
+        <div class="row blockSearchMain">
+            <div class="form-row rowSearchMain">
+                <div class="form-group col-md-6">
+                    <label for="inputZapros" class="col-form-label col-form-label-lg">Что вы ищете</label>
+                    <input type="text" class="form-control form-control-lg" id="inputZapros" placeholder="Плата форматера для HP P1005">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="selectCategory" class="col-form-label col-form-label-lg">Категория</label>
+                    <select class="form-control form-control-lg" id="selectCategory">
+                        <option>Принтеры/копиры</option>
+                        <option>--Продажа принтеров/копиров</option>
+                        <option>--Принтеры/копиры на запчасти</option>
+                        <option>--Запчасти для принтеров/копиров</option>
+                        <option>----Блоки лазера/сканера/Сканирующие линейки</option>
+                        <option>----Блоки питания</option>
+                        <option>----Блоки проявки</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2 align-items-end justify-content-end d-flex">
+                    <button class="btn btn-warning btn-lg">Поиск</button>
+                </div>
+            </div>
+            <div class="form-row rowSearchMain">
+                <div class="form-group col-lg-6 d-none d-lg-block">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCyti" class="col-form-label">Местоположение</label>
+                            <input type="text" class="form-control" id="inputCyti">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="selectType" class="col-form-label">Тип объявления</label>
+                            <select class="form-control" id="selectType">
+                                <option>Любой</option>
+                                <option>Продается</option>
+                                <option>Покупается</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-lg-4 d-none d-lg-block">
+                    <div class="form-row">
+                        <div class="form-group col-md-5">
+                            <label for="inputPriceFrom" class="col-form-label">Цена от</label>
+                            <input type="text" class="form-control" id="inputPriceFrom">
+                        </div>
+                        <div class="col-md-2 form-group d-flex align-items-end justify-content-center">
+                            <label class="col-form-label">
+                                <i class="fa fa-arrows-h"></i>
+                            </label>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <label for="inputPriceTo" class="col-form-label">Цена до</label>
+                            <input type="text" class="form-control" id="inputPriceTo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row rowSearchBottom">
+                <div class="form-group col-6 col-md-6 d-flex justify-content-start">
+                    <a href="#">Очистить поиск</a>
+                </div>
+                <div class="form-group col-6 col-md-6 d-flex justify-content-end">
+                    <a href="#">Показать все</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Блок категорий-->
+<div class="container">
+    <div class="row justify-content-around">
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPrint">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#printerCopir" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-print fa-stack-1x"></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#printerCopir" data-toggle="modal">Принтеры / копиры</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPhone">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#mobilePhone" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-phone fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#mobilePhone" data-toggle="modal">Телефоны</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainTab">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#tablet" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tablet fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#tablet" data-toggle="modal">Планшеты</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainNotebook">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#noteBook" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-laptop fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#noteBook" data-toggle="modal">Ноутбуки</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainTV">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#monitorTV" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tv fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#monitorTV" data-toggle="modal">Мониторы / Телевизоры</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainPC">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#PC" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-desktop fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#PC" data-toggle="modal">Компьютеры</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainRashodka">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#rashodka" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-leaf fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#rashodka" data-toggle="modal">Расходные материалы</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-1 categoryMain categoryMainOther">
+            <div class="row text-center">
+                <div class="col-12">
+                    <a href="#other" data-toggle="modal">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-spinner fa-stack-1x"></i>
+                            </span>
+                    </a>
+                </div>
+                <div class="col-12 categoryMainCaption">
+                    <a href="#other" data-toggle="modal">Прочее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Модальные окна для категорий-->
+    <div id="printerCopir" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Принтеры / копиры</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="pages/category.html">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-print"></i></span>
+                                            <span>Продажа принтеров</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-wrench"></i></span>
+                                            <span>Принтеры на запчасти</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-cogs"></i></span>
+                                            <span>Запчасти для принтеров</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mobilePhone" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Телефоны</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-phone"></i></span>
+                                            <span>Продажа телефонов</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-wrench"></i></span>
+                                            <span>Телефоны на запчасти</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-cogs"></i></span>
+                                            <span>Запчасти для телефонов</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tablet" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Планшеты</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-tablet"></i></span>
+                                            <span>Продажа планшетов</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-wrench"></i></span>
+                                            <span>Планшеты на запчасти</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-cogs"></i></span>
+                                            <span>Запчасти для планшетов</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="noteBook" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Ноутбуки</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-laptop"></i></span>
+                                            <span>Продажа ноутбуков</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-wrench"></i></span>
+                                            <span>Ноутбуки на запчасти</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-cogs"></i></span>
+                                            <span>Запчасти для ноутбуков</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="monitorTV" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Мониторы / Телевизоры</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-tv"></i></span>
+                                            <span>Продажа мониторов / телевизоров</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-wrench"></i></span>
+                                            <span>Мониторы / телевизоры на запчасти</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-cogs"></i></span>
+                                            <span>Запчасти для мониторов / телевизоров</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="PC" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Компьютеры / комплектующие</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Блоки питания</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Вентиляторы</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Видеокарты</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Жесткие диски</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Звуковые карты</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Клавиатуры</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Компьютеры в сборе</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Контроллеры</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Корпуса</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Кулеры для процессоров</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Материнские платы</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Мультимедиа устройства</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Мышки</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Оперативная память</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Приводы</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Процессоры</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Прочее</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Сетевые карты</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Шлейфы</span>
+                                        </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="rashodka" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Расходные материалы</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-leaf"></i></span>
+                                            <span>Картриджи для принтеров</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-paperclip"></i></span>
+                                            <span>Прочее</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="other" class="modal fade modalCategoryDetail">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span>Прочее</span>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Закрыть">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-gamepad"></i></span>
+                                            <span>Игровые приставки</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Электронные книги</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Стиральные машинки</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain">
+                                            <span class="icon"><i class="fa fa-hashtag"></i></span>
+                                            <span>Прочая техника</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddAd">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Добавить объявление</span>
+                                        </span>
+                                </a>
+                                <a href="#">
+                                        <span class="categoryDetailMain btnAddFastSearch">
+                                            <span class="icon"><i class="fa fa-plus-circle"></i></span>
+                                            <span>Подать запрос на поиск</span>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---->
+<!--Блок объявлений и сервисов-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9 goodsMain">
+                <h5>VIP объявления</h5>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+                    <div class="col ads highlight">
+                        <div class="ads_wrapper">
+                            <a href="#" title="Продам принтер HP 1010 как новый!">
+                                <img src="../img/print_main.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" title="Продам принтер HP 1010 как новый!">
+                                <h6>Продам принтер HP 1010 как новый!</h6>
+                            </a>
+                            <a href="#">
+                                <p class="price"> 3230 руб.<span title="Продажа" class="ads_sell"><i class="fa fa-legal"></i></span></p>
+
+                                <p class="address"> г. Самара, ул. Красногвардейская дом 20</p>
+                                <p class="time">Сегодня, 11:34</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col ads highlight">
+                        <div class="ads_wrapper">
+                            <a href="#" title="Куплю L800 для печати фотографий">
+                                <img src="../img/print_str.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" title="Куплю L800 для печати фотографий">
+                                <h6>Куплю L800 для печати фотографий</h6>
+                            </a>
+                            <a href="#">
+                                <p class="price"> 6000 руб.<span title="Покупка" class="ads_buy"><i class="fa fa-search"></i></span></p>
+                                <p class="address"> г. Хабаровск</p>
+                                <p class="time">Сегодня, 08:42</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col ads highlight">
+                        <div class="ads_wrapper">
+                            <a href="#" title="Samsung SCX-4200 как новый">
+                                <img src="../img/printer_2.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" title="Samsung SCX-4200 как новый">
+                                <h6>Samsung SCX-4200 как новый</h6>
+                            </a>
+                            <a href="#">
+                                <p class="price"> 2500 руб.<span title="Продажа" class="ads_sell"><i class="fa fa-legal"></i></span></p>
+                                <p class="address"> г. Москва</p>
+                                <p class="time">01.06.2021</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col ads highlight">
+                        <div class="ads_wrapper">
+                            <a href="#" title="Ноутбук Acer, рабочий, разбита матрица">
+                                <img src="../img/noutebook.jpg">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" title="Ноутбук Acer, рабочий, разбита матрица">
+                                <h6>Ноутбук Acer, рабочий, разбита матрица</h6>
+                            </a>
+                            <a href="#">
+                                <p class="price"> 4000 руб.<span title="Продажа" class="ads_sell"><i class="fa fa-legal"></i></span></p>
+                                <p class="address"> г. Владивосток, ул. Шоссейная</p>
+                                <p class="time">01.06.2021</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--Сервисы-->
+            <div class="col-12 col-lg-3 serviceProdaiZIP">
+                <h5>Сервисы ProdaiZIP</h5>
+                <div class="row">
+                    <div class="col-2 serviceSafeSdelka">
+                        <a href="#"><i class="fa fa-shield"></i></a>
+                    </div>
+                    <div class="col-10 serviceSafeSdelka">
+                        <a href="#"><h6>Безопасная сделка</h6></a>
+                        <a href="#"><p>Проверка и отправка оборудования и ЗИП через партнеров ProdaiZIP</p></a>
+                    </div>
+                    <div class="col-2 serviceFastSearch">
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </div>
+                    <div class="col-10 serviceFastSearch">
+                        <a href="#"><h6>Горячий поиск ЗИП</h6></a>
+                        <a href="#"><p>Отправьте запрос на поиск нужной запчасти сервис-партнерам ProdaiZIP по всей России</p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Блок Горячие запросы -->
+        <div class="row">
+            <div class="col-12 fastSearch">
+                <h5>Горячие запросы</h5>
+                <table class="table table-responsive-sm table-hover">
+                    <thead>
+                    <tr>
+                        <th>Раздел</th>
+                        <th>Запрос</th>
+                        <th>Город</th>
+                        <th>Цена</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody class="table-hover">
+                    <tr>
+                        <td><i class="fa fa-print"></i></td>
+                        <td>Срочно! Куплю плату форматтера HP M1132</td>
+                        <td>Новосибирск</td>
+                        <td>1500 ₽</td>
+                        <td><button class="btn btn-success">Предложить</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-print"></i></td>
+                        <td>Линейка сканера на Samsung SCX-4300</td>
+                        <td>Хабаровск</td>
+                        <td>500 ₽</td>
+                        <td><button class="btn btn-success">Предложить</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-print"></i></td>
+                        <td>Плата питания на Pantum P2000</td>
+                        <td>Москва</td>
+                        <td>1000 ₽</td>
+                        <td><button class="btn btn-success">Предложить</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-phone"></i></td>
+                        <td>Корпус черный на Samsung A20</td>
+                        <td>Хабаровск</td>
+                        <td>500 ₽</td>
+                        <td><button class="btn btn-success">Предложить</button></td>
+                    </tr>
+                    <tr>
+                        <td><i class="fa fa-tv"></i></td>
+                        <td>Экран (матрица) телевизора LG Flatron A5320</td>
+                        <td>Хабаровск</td>
+                        <td>500 ₽</td>
+                        <td><button class="btn btn-success">Предложить</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"><a href="#">Смотреть все запросы ></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<!--Подвал сайта-->
+    <div class="container-fluid podval">
+        <div class="row justify-content-around">
+            <div class="col-12 text-center priziv">
+                <h2>Начните зарабатывать сейчас</h2>
+                <button class="btn btn-warning">Зарегистрироваться</button>
+                <button class="btn btn-danger">Подать объявление</button>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
+                <h5><i class="fa fa-list"></i>Услуги</h5>
+                <p><a href="#">Подать объявление</a></p>
+                <p><a href="#">Горящий запрос</a></p>
+                <p><a href="#">Безопасная сделка</a></p>
+                <p><a href="#">Размещение рекламы</a></p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
+                <h5><i class="fa fa-cogs"></i>Служба поддержки</h5>
+                <p><a href="#">Обратная связь</a></p>
+                <p><a href="#">Сотрудничество</a></p>
+                <p><a href="#">Жалоба на объявление</a></p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
+                <h5><i class="fa fa-info"></i>Информация</h5>
+                <p><a href="#">О компании</a></p>
+                <p><a href="#">Политика безопасности</a></p>
+                <p><a href="#">Условия и соглашения</a></p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-2 text-center text-lg-left">
+                <h5><i class="fa fa-id-card"></i>Личный кабинет</h5>
+                <p><a href="#">Мои объявления</a></p>
+                <p><a href="#">Мои запросы</a></p>
+                <p><a href="#">Мои сообщения</a></p>
+                <p><a href="#">Избранное</a></p>
+                <p><a href="#">Кошелек</a></p>
+                <p><a href="#">Профиль</a></p>
+            </div>
+            <div class="col-12 podvalCopyright">
+                <hr>
+                <h6>Пользование сервисами сайта, в том числе подача объявлений, означает принятие условий <a href="#">пользовательского соглашения</a></h6>
+                <h6>Все права защищены. ProdaiZIP©</h6>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
+
