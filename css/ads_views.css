@@ -1,3 +1,28 @@
+/**/
+.specific-title,
+.specific-value {
+    width: 50%;
+    text-align: left;
+    font-size: 12px;
+    float: left;
+}
+.specific-title {
+    color: #686868;
+}
+.specific-value {
+    color: #000000;
+}
+/**/
+.ads-block__seller-block__descrip {
+    width: 70%;
+    float: left;
+    font-size: 12px;
+}
+.ads-block__seller-block__logo {
+    width: 30%;
+    font-size: 12px;
+    float: left;
+}
 /*Платная услуга для объявлений - VIP*/
 .vip {
 
