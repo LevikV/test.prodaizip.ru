@@ -223,7 +223,7 @@
                          <div class="specific-value">A4</div>
                          <div class="specific-title">Комплектация:</div>
                          <div class="specific-value">USB кабель, кабель питания, драйверы</div>
-                         <a href="#">Все характеристики</a>
+                         <a href="#ad-specific" data-toggle="tab">Все характеристики</a>
                      </div>
                      <hr>
                      <!-- Информация о продавце -->
@@ -240,57 +240,65 @@
                          <div class="ads-block__seller-block__logo">
                              Логотип
                          </div>
-                         <button type="button" class="btn btn-primary">
+                         <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#seller-contact">
                              Показать контакты
                          </button>
+                         <div class="collapse" id="seller-contact">
+                             <div class="ads-block__seller-block__contacts">
+                                 <h4>+7 (924) 643 2111</h4>
+                                 <h6>г. Самара, ул. Красногвардейская дом 20</h6>
+                             </div>
+                         </div>
                      </div>
                  </div>
                  <!-- Блок подробно о товаре -->
                  <div class="col-12">
                      <ul class="nav nav-pills">
                          <li class="nav-item">
-                             <a href="#auth_tab_modal" class="nav-link active" data-toggle="tab">
+                             <a href="#ad-description" class="nav-link active" data-toggle="tab">
                                  Описание
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="#register_tab_modal" class="nav-link" data-toggle="tab">
+                             <a href="#ad-specific" class="nav-link" data-toggle="tab">
                                  Характеристики
                              </a>
                          </li>
                      </ul>
+                     <!-- Вкладки -->
                      <div class="tab-content">
-                         <div class="tab-pane fade show active" id="auth_tab_modal">
-                             <form action="">
-                                 <div class="form-group">
-                                     <label for="input_login" class="col-form-label">
-                                         Телефон или e-mail
-                                     </label>
-                                     <input type="text" id="input_login" class="form-control" placeholder="Телефон или e-mail">
-                                     <label for="input_password" class="col-form-label">
-                                         Пароль
-                                     </label>
-                                     <input type="password" id="input_password" class="form-control" placeholder="Пароль">
-                                 </div>
-                                 <button type="submit" title="Войти с паролем" class="btn btn-primary">
-                                     Войти с паролем
-                                 </button>
-                             </form>
+                         <!-- Вкладка описание -->
+                         <div class="tab-pane fade show active" id="ad-description">
+                             <div class="ad-description">
+                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad adipisci, aspernatur atque consequatur cupiditate dignissimos excepturi in ipsam labore nemo omnis perspiciatis praesentium ratione saepe sapiente sequi sit sunt unde veniam voluptatibus! Asperiores libero obcaecati quis voluptate voluptatibus. Accusantium animi beatae dolore est in repellat, soluta voluptas voluptatibus! Autem commodi, debitis distinctio dolorem illo ipsam magnam mollitia repellat?
+                             </div>
                          </div>
-                         <div class="tab-pane fade" id="register_tab_modal">
-                             <form action="">
-                                 <div class="form-group">
-                                     <label for="input_login_new" class="col-form-label">
-                                         Телефон или e-mail
-                                     </label>
-                                     <input type="text" id="input_login_new" class="form-control" placeholder="Телефон или e-mail">
-                                 </div>
-                                 <button type="submit" title="Выслать СМС/Письмо с паролем" class="btn btn-primary">
-                                     Выслать СМС/Письмо с паролем
-                                 </button>
-                             </form>
+                         <!-- Вкладка характеристики -->
+                         <div class="tab-pane fade" id="ad-specific">
+                             <div class="ad-description">
+                                 <div class="specific-title">Бренд:</div>
+                                 <div class="specific-value">HP</div>
+                                 <div class="specific-title">Модель:</div>
+                                 <div class="specific-value">LJ 1010</div>
+                                 <div class="specific-title">Технология печати:</div>
+                                 <div class="specific-value">Лазерный</div>
+                                 <div class="specific-title">Цветность:</div>
+                                 <div class="specific-value">Черно-белый</div>
+                                 <div class="specific-title">Тип устройства:</div>
+                                 <div class="specific-value">Принтер</div>
+                                 <div class="specific-title">Пробег:</div>
+                                 <div class="specific-value">Н/У</div>
+                                 <div class="specific-title">Макс. формат:</div>
+                                 <div class="specific-value">A4</div>
+                                 <div class="specific-title">Комплектация:</div>
+                                 <div class="specific-value">USB кабель, кабель питания, драйверы</div>
+                             </div>
                          </div>
                      </div>
+                 </div>
+                 <!-- Кнопка пожаловаться -->
+                 <div class="col-12">
+
                  </div>
              </div>
 

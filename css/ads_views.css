@@ -1,4 +1,4 @@
-/**/
+/*Страница объявления*/
 .specific-title,
 .specific-value {
     width: 50%;
@@ -23,6 +23,19 @@
     font-size: 12px;
     float: left;
 }
+.ads-block__seller-block__contacts {
+    padding-top: 10px;
+}
+/**/
+.ad-description,
+.ad-description {
+    padding-top: 20px;
+}
+
+
+
+
+
 /*Платная услуга для объявлений - VIP*/
 .vip {
 
