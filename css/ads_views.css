@@ -27,7 +27,9 @@
     padding-top: 10px;
 }
 /**/
-.ad-description,
+.ad-missing,
+.ad-compatible,
+.ad-specific,
 .ad-description {
     padding-top: 20px;
 }
