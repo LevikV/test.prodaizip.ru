@@ -23,16 +23,16 @@ html, body {
 .navbar .btn {
     margin-top: 8px;
 }
-.navbar-nav li {
+.navbar .navbar-nav li {
     padding-right: 20px;
 }
-.nav-link {
+.navbar .nav-link {
     font-size: 1.1em !important;
 }
-.menuMobile {
+.navbar .nav-item-mobile {
     font-size: 0.6em;
 }
-.menuMobile .btn {
+.navbar .nav-item-mobile .btn {
     text-align: left;
     padding-left: 8px;
 }
