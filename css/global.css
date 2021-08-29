@@ -1,5 +1,3 @@
-/*Подключаем файл шрифтов*/
-@import "/fonts/stylesheet.css";
 /*Общие настройки*/
 html, body {
     font-family: Roboto;
