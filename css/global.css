@@ -5,16 +5,71 @@ html, body {
 
 
 /**/
-/************************Бургер меню для маленьких экранов************************/
+/************************ Навигационное меню ************************/
 /**/
-.navbar {
+.menutop {
     background-color: #ffffff;
 }
-
+/* Кнопка Войти/Выйти */
+.menutop .btn-info {
+    background: white;
+    color: black;
+    height: 30px;
+    border-radius: 15px;
+    padding-top: 3px;
+}
 @media (max-width: 767px) {
-    .navbar {
+    .menutop {
         background-color: #0398db;
+        width: 100%;
+        max-width: 100%;
     }
+    .menutop>nav>span {
+        display: contents;
+    }
+}
+/* Лэйбл авторизации пользователя */
+.menutop .label_log-in:after {
+    position: absolute;
+    top: -4px;
+    right: 4px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #34ce57;
+}
+/* Лэйбл наличия количества уведомлений */
+.menutop .has-badge[data-count]:after {
+    position:absolute;
+    right:0%;
+    top:1%;
+    content: attr(data-count);
+    font-size:50%;
+    padding:.6em;
+    border-radius:999px;
+    line-height:.75em;
+    color: white;
+    background:rgba(255,0,0,.85);
+    text-align:center;
+    min-width:2em;
+    font-weight:bold;
+}
+.menutop .fa-stack-1x {
+    color: dimgray;
+}
+.menutop .fa-stack-2x {
+    color: #eee;
+}
+/**/
+.menutop .profile_img {
+    position: relative;
+}
+.menutop .profile_img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 /*
 .navbar label {

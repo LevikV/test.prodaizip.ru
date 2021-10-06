@@ -18,34 +18,80 @@
 </head>
 <body>
 
-<!--Меню для маленьких экранов-->
-<div class="container px-0">
-    <nav class="navbar navbar-expand-md navbar-dark sticky-top px-0">
+<!-- Верхнее меню -->
+<div class="container sticky-top px-0 menutop">
+    <nav class="navbar navbar-expand-md navbar-dark px-3 px-md-0">
+        <!-- для больших экранов -->
         <div class="d-none d-md-flex mr-auto">
-            <a href="#index.html" class="navbar-brand"><img class="logo2" src="./img/logo.png" alt="ProdaiZip.ru"></a>
+            <a href="#page" class="navbar-brand mr-0">
+                <img src="./img/logo.png" alt="ProdaiZip.ru">
+            </a>
         </div>
-        <div class="d-none d-md-flex">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Поиск">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-            </form>
-            <a href="#" class="btn btn-danger">
+        <div class="d-none d-md-flex align-items-center">
+
+            <a href="#page" class="px-1">
+                <span class="fa-stack fa-1x has-badge" data-count="4">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-bell fa-stack-1x"></span>
+                </span>
+            </a>
+
+            <a href="#page" class="px-1">
+                <span class="fa-stack fa-1x has-badge" data-count="4">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-search fa-stack-1x"></span>
+                </span>
+            </a>
+
+            <a href="#page" class="px-1">
+                <span class="fa-stack fa-1x has-badge" data-count="4">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-list fa-stack-1x"></span>
+                </span>
+            </a>
+
+            <a href="#page" class="px-1">
+                <span class="fa-stack fa-1x has-badge" data-count="4">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-comment fa-stack-1x"></span>
+                </span>
+            </a>
+
+            <a href="#page" class="notice border-right mr-2 px-1">
+                <span class="fa-stack fa-1x has-badge" data-count="6">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-star fa-stack-1x"></span>
+                </span>
+            </a>
+
+            <a href="#page" class="btn btn-info">
+                Выйти
+            </a>
+
+            <a href="#page" class="profile_img label_log-in px-2 mx-1">
+                <img src="./img/840px-Elon-musk-850.jpg" alt="Профиль">
+            </a>
+
+            <a href="#page" class="nav-link btn btn-danger py-1 py-lg-2 px-md-2 px-lg-3">
                 Подать объявление
             </a>
         </div>
+        <!-- для маленьких экранов -->
 
-        <div class="d-flex d-md-none">
-            <a href="#" class="navbar-brand">ProdaiZIP.ru</a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="">
-                <i class="fa fa-search"></i>#search
-            </button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
-                <i class="fa fa-user"></i>
-            </button>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
-                <i class="fa fa-list"></i>
-            </button>
-        </div>
+        <a href="#page" class="navbar-brand d-inline-block d-md-none mr-auto">ProdaiZIP.ru</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search">
+            <span class="fa fa-search"></span>
+        </button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
+            <span class="fa fa-user"></span>
+        </button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="fa fa-list"></span>
+        </button>
+
         <span class="d-md-none">
             <div class="collapse navbar-collapse" id="search">
                 <ul class="navbar-nav">
@@ -73,6 +119,7 @@
             </ul>
             </div>
         </span>
+
         <span class="d-md-none">
             <div class="collapse navbar-collapse" id="profile">
             <ul class="navbar-nav">
@@ -117,52 +164,7 @@
 <!--Основной контент сайта-->
     <div class="container">
 <!--Верхнее меню-->
-        <div class="row">
-            <div class="d-none d-md-block col-md-12 text-right menu_top align-items-center">
-                <a href="#">
-                    <img class="logo2" src="./img/logo.png" alt="ProdaiZip.ru">
-                </a>
-                <a href="#">
-                <span class="fa-stack fa-1x has-badge" data-count="4">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-bell fa-stack-1x"></i>
-                </span>
-                </a>
-                <a href="#">
-                <span class="fa-stack fa-1x has-badge" data-count="4">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-search fa-stack-1x"></i>
-                </span>
-                </a>
-                <a href="#">
-                <span class="fa-stack fa-1x has-badge" data-count="4">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-list fa-stack-1x"></i>
-                </span>
-                </a>
-                <a href="#">
-                <span class="fa-stack fa-1x has-badge" data-count="4">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-comment fa-stack-1x"></i>
-                </span>
-                </a>
-                <a href="#" class="notice">
-                <span class="fa-stack fa-1x has-badge" data-count="6">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-star fa-stack-1x"></i>
-                </span>
-                </a>
-                <a href="#" class="btn btn-info">
-                    Выйти
-                </a>
-                <a href="#" class="profileimg log-in">
-                    <img src="./img/840px-Elon-musk-850.jpg" alt="Профиль">
-                </a>
-                <a href="#" class="btn btn-danger">
-                    Подать объявление
-                </a>
-            </div>
-        </div>
+
 <!--Блок поиска-->
         <form>
             <div class="row blockSearchMain">
