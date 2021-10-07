@@ -2,11 +2,10 @@
 html, body {
     font-family: Roboto;
 }
-
-
 /**/
 /************************ Навигационное меню ************************/
 /**/
+/* Десктопное меню */
 .menutop {
     background-color: #ffffff;
 }
@@ -44,23 +43,7 @@ html, body {
     background: #34ce57;
 }
 /* Лэйбл (Badge) наличия количества уведомлений */
-/*
-.menutop .has-badge[data-count]:after {
-    position:absolute;
-    right:0%;
-    top:1%;
-    content: attr(data-count);
-    font-size:50%;
-    padding:.6em;
-    border-radius:999px;
-    line-height:.75em;
-    color: white;
-    background:rgba(255,0,0,.85);
-    text-align:center;
-    min-width:2em;
-    font-weight:bold;
-}
-*/
+
 .menutop .badge {
     position:absolute;
     right:0%;
@@ -84,129 +67,20 @@ html, body {
     height: 40px;
     border-radius: 20px;
 }
-/*
-.navbar label {
-    color: white;
-    text-align: left;
+/* Мобильное меню */
+.menutop button>span {
+    font-size: 1.6em;
 }
-.navbar i {
-    font-size: 1.8em;
+.menutop .btn-full-width {
+    width: 100%;
 }
-.navbar button {
-    margin-left: 8px;
+.menutop label {
+    color: #ffffff;
 }
-.navbar .btn {
-    margin-top: 8px;
-}
-.navbar .navbar-nav li {
-    padding-right: 20px;
-}
-.navbar .nav-link {
-    font-size: 1.1em !important;
-}
-.navbar .nav-item-mobile {
-    font-size: 0.6em;
-}
-.navbar .nav-item-mobile .btn {
-    text-align: left;
-    padding-left: 8px;
+.menutop .nav-link {
+    color: #ffffff !important;
 }
 
- */
-/**/
-/************************Блок верхнего меню************************/
-/**/
-/*Переделанное верхнее меню для всех страниц*/
-/*
-.menu_top {
-    padding: 20px 0 0 0;
-}
-.menu_top .notice {
-    padding-top: 11px;
-    padding-bottom: 11px;
-    border-right: 1px solid #eee;
-}
-.menu_top a {
-    text-decoration: none;
-}
-.menu_top span {
-    margin-left: 3px;
-    margin-right: 3px;
-}
-.menu_top .fa-stack-1x {
-    color: dimgray;
-}
-.menu_top .fa-stack-2x {
-    color: #eee;
-}
-.menu_top .logo2 {
-    position: absolute;
-    left: 0;
-    top: 20px;
-}
-.menu_top .log-in:after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: '';
-    width: 16px;
-    height: 16px;
-    border-radius: 8px;
-    border: none;
-    background: #34ce57;
-}
-.menu_top .profileimg {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: 3px;
-    margin-right: 8px;
-}
-.profileimg {
-    position: relative;
-}
-.profileimg img {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
-}
-.profileimg span {
-    position: absolute;
-    top:0;
-    right: 0;
-    color: #34ce57;
-}
-.menu_top .btn-info {
-    background: white;
-    color: black;
-    height: 30px;
-    border-radius: 15px;
-    margin-right: 3px;
-    margin-left: 8px;
-    padding-top: 3px;
-    padding-bottom: 0;
-}
-.menu_top .btn-danger {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-right: 0;
-}
-
-.menu_top .has-badge[data-count]:after{
-    position:absolute;
-    right:0%;
-    top:1%;
-    content: attr(data-count);
-    font-size:50%;
-    padding:.6em;
-    border-radius:999px;
-    line-height:.75em;
-    color: white;
-    background:rgba(255,0,0,.85);
-    text-align:center;
-    min-width:2em;
-    font-weight:bold;
-}
-*/
 /**/
 /************************ Общий контент для всех страниц ************************/
 /**/

@@ -18,165 +18,185 @@
 </head>
 <body>
 
-<!--Меню для маленьких экранов-->
-<nav class="navbar d-md-none navbar-expand-md navbar-dark sticky-top">
-    <div class="container-fluid">
-        <a href="#" class="navbar-brand">ProdaiZIP.ru</a>
-        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#search">
-            <i class="fa fa-search"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
-            <i class="fa fa-user"></i>
-        </button>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
-            <i class="fa fa-list"></i>
-        </button>
-    </div>
-    <div class="collapse navbar-collapse" id="search">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <form class="form">
-                    <label for="searchInput">Что вы ищете</label>
-                    <input id="searchInput" class="form-control " type="search" placeholder="Введите слово для поиска">
-                    <label for="searchCategory">Категория</label>
-                    <select class="form-control" id="searchCategory">
-                        <option>Принтеры/копиры</option>
-                        <option>Телефоны</option>
-                        <option>Планшеты</option>
-                        <option>Ноутбуки</option>
-                        <option>Мониторы/телевизоры</option>
-                        <option>Компьютеры/комплектующие</option>
-                        <option>Расходные материалы</option>
-                        <option>Прочее</option>
-                    </select>
-                    <label for="searchCity">Местоположение</label>
-                    <input id="searchCity" class="form-control " type="text" placeholder="Город">
-                    <button class="btn btn-success" type="submit">Поиск</button>
-                    <button class="btn btn-danger" type="submit">Сброс</button>
-                </form>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse" id="profile">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Войти</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Зарегистрироваться</a>
-            </li>
-        </ul>
-    </div>
-    <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav">
-            <div class="nav-item nav-item-mobile">
-                <a class="nav-link btn btn-success btn-sm" href="#"><i class="fa fa-plus-circle"></i> Добавить объявление</a>
-                <a class="nav-link btn btn-sm btn-danger" href="#"><i class="fa fa-plus-circle"></i> Добавить горячий запрос</a>
-            </div>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Главная</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все объявления</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Услуги</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Обратная связь</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">О компании</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<!-- Верхнее меню -->
+<div class="container sticky-top px-0 menutop">
+    <nav class="navbar navbar-expand-md navbar-dark px-3 px-md-0">
+        <!-- для больших экранов -->
+        <div class="d-none d-md-flex mr-auto">
+            <a href="#page" class="navbar-brand mr-0">
+                <img src="./img/logo.png" alt="ProdaiZip.ru">
+            </a>
+        </div>
+        <div class="d-none d-md-flex align-items-center">
 
-<!--Основной контент сайта-->
-    <div class="container">
-<!--Верхнее меню-->
-        <div class="row">
-            <div class="d-none d-md-block col-md-12 text-right menu_top align-items-center">
-                <a href="#">
-                    <img class="logo2" src="./img/logo.png" alt="ProdaiZip.ru">
-                </a>
-
-                <a href="#" class="notice">
-                <span class="fa-stack fa-1x" data-count="0">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-star fa-stack-1x"></i>
+            <a href="#page" class="notice border-right mr-2 px-1">
+                <span class="fa-stack fa-1x has-badge">
+                    <span class="fa fa-circle fa-stack-2x"></span>
+                    <span class="fa fa-star fa-stack-1x"></span>
                 </span>
-                </a>
-                <a href="#auth_modal" class="btn btn-info" data-toggle="modal">
-                    Войти
-                </a>
-                <a href="#" class="profileimg">
-                    <img src="./img/profile-default.png" alt="Профиль">
-                </a>
-                <a href="#" class="btn btn-danger">
-                    Подать объявление
-                </a>
+                <span class="badge badge-pill badge-danger">8</span>
+            </a>
+
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#auth_modal">
+                Войти
+            </button>
+
+            <a href="#page" class="profile_img px-2 mx-1">
+                <img src="./img/profile-default_v_1.png" alt="Профиль">
+            </a>
+
+            <a href="#page" class="nav-link btn btn-danger py-1 py-lg-2 px-md-2 px-lg-3">
+                Подать объявление
+            </a>
+
+        </div>
+        <!-- для маленьких экранов -->
+        <a href="#page" class="navbar-brand d-inline-block d-md-none mr-auto">ProdaiZIP.ru</a>
+        <!-- кнопка Поиска -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#search">
+            <span class="fa fa-search"></span>
+        </button>
+        <!-- кнопка Аккаунт -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#profile">
+            <span class="fa fa-user"></span>
+        </button>
+        <!-- кнопка Меню -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#menu">
+            <span class="fa fa-list"></span>
+        </button>
+        <!-- раскрывающийся блок Поиска -->
+        <span class="d-md-none">
+            <div class="collapse navbar-collapse" id="search">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form class="form">
+                            <label for="searchInput">Что вы ищете</label>
+                            <input id="searchInput" class="form-control mb-3" type="search" placeholder="Введите слово для поиска">
+                            <label for="searchCategory">Категория</label>
+                            <select class="form-control mb-3" id="searchCategory">
+                                <option>Принтеры/копиры</option>
+                                <option>Телефоны</option>
+                                <option>Планшеты</option>
+                                <option>Ноутбуки</option>
+                                <option>Мониторы/телевизоры</option>
+                                <option>Компьютеры/комплектующие</option>
+                                <option>Расходные материалы</option>
+                                <option>Прочее</option>
+                            </select>
+                            <label for="searchCity">Местоположение</label>
+                            <input id="searchCity" class="form-control mb-3" type="text" placeholder="Город">
+                            <button class="btn btn-success" type="submit">Поиск</button>
+                            <button class="btn btn-danger" type="submit">Сброс</button>
+                        </form>
+                    </li>
+                </ul>
             </div>
-            <!-- Модальное окно для авторизации/регистрации -->
-            <div id="auth_modal" class="modal fade">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <ul class="nav nav-pills justify-content-center">
-                                <li class="nav-item">
-                                    <a href="#auth_tab_modal" class="nav-link active" data-toggle="tab">
-                                        Войти с паролем
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#register_tab_modal" class="nav-link" data-toggle="tab">
-                                        Регистрация
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="auth_tab_modal">
-                                    <form action="">
-                                        <div class="form-group">
-                                            <label for="input_login" class="col-form-label">
-                                                Телефон или e-mail
-                                            </label>
-                                            <input type="text" id="input_login" class="form-control" placeholder="Телефон или e-mail">
-                                            <label for="input_password" class="col-form-label">
-                                                Пароль
-                                            </label>
-                                            <input type="password" id="input_password" class="form-control" placeholder="Пароль">
-                                        </div>
-                                        <button type="submit" title="Войти с паролем" class="btn btn-primary">
-                                            Войти с паролем
-                                        </button>
-                                    </form>
-                                </div>
-                                <div class="tab-pane fade" id="register_tab_modal">
-                                    <form action="">
-                                        <div class="form-group">
-                                            <label for="input_login_new" class="col-form-label">
-                                                Телефон или e-mail
-                                            </label>
-                                            <input type="text" id="input_login_new" class="form-control" placeholder="Телефон или e-mail">
-                                        </div>
-                                        <button type="submit" title="Выслать СМС/Письмо с паролем" class="btn btn-primary">
-                                            Выслать СМС/Письмо с паролем
-                                        </button>
-                                    </form>
-                                </div>
+        </span>
+        <!-- раскрывающийся блок Аккаунта -->
+        <span class="d-md-none">
+            <div class="collapse navbar-collapse" id="profile">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Зарегистрироваться</a>
+                    </li>
+                </ul>
+            </div>
+        </span>
+        <!-- раскрывающийся блок Меню -->
+        <span class="d-md-none">
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-success btn-sm btn-full-width my-2 py-2" href="#page"><span class="fa fa-plus-circle"></span> Добавить объявление</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-sm btn-danger btn-full-width py-2" href="#page"><span class="fa fa-plus-circle"></span> Добавить горячий запрос</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Все объявления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Обратная связь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">О компании</a>
+                    </li>
+                </ul>
+            </div>
+        </span>
+    </nav>
+</div>
+<!-- Модальное окно для авторизации/регистрации -->
+<div class="modal fade" id="auth_modal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <ul class="nav nav-pills justify-content-center">
+                    <li class="nav-item">
+                        <a href="#auth_tab_modal" class="nav-link active" data-toggle="tab">
+                            Войти с паролем
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#register_tab_modal" class="nav-link" data-toggle="tab">
+                            Регистрация
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="auth_tab_modal">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="input_login" class="col-form-label">
+                                    Телефон или e-mail
+                                </label>
+                                <input type="text" id="input_login" class="form-control" placeholder="Телефон или e-mail">
+                                <label for="input_password" class="col-form-label">
+                                    Пароль
+                                </label>
+                                <input type="password" id="input_password" class="form-control" placeholder="Пароль">
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="#">Напомнить пароль</a>
-                        </div>
+                            <button type="submit" title="Войти с паролем" class="btn btn-primary">
+                                Войти с паролем
+                            </button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="register_tab_modal">
+                        <form action="">
+                            <div class="form-group">
+                                <label for="input_login_new" class="col-form-label">
+                                    Телефон или e-mail
+                                </label>
+                                <input type="text" id="input_login_new" class="form-control" placeholder="Телефон или e-mail">
+                            </div>
+                            <button type="submit" title="Выслать СМС/Письмо с паролем" class="btn btn-primary">
+                                Выслать СМС/Письмо с паролем
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <a href="#">Напомнить пароль</a>
+            </div>
         </div>
+    </div>
+</div>
+
+<!--Основной контент сайта-->
+    <div class="container">
 <!--Блок поиска-->
         <form>
             <div class="row blockSearchMain">

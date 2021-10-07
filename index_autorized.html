@@ -69,9 +69,9 @@
                 <span class="badge badge-pill badge-danger">8</span>
             </a>
 
-            <a href="#page" class="btn btn-info">
+            <button type="button" class="btn btn-info">
                 Выйти
-            </a>
+            </button>
 
             <a href="#page" class="profile_img label_log-in px-2 mx-1">
                 <img src="./img/840px-Elon-musk-850.jpg" alt="Профиль">
@@ -82,95 +82,95 @@
             </a>
         </div>
         <!-- для маленьких экранов -->
-
         <a href="#page" class="navbar-brand d-inline-block d-md-none mr-auto">ProdaiZIP.ru</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#search">
+        <!-- кнопка Поиска -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#search">
             <span class="fa fa-search"></span>
         </button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#profile">
+        <!-- кнопка Аккаунт -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#profile">
             <span class="fa fa-user"></span>
         </button>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+        <!-- кнопка Меню -->
+        <button class="navbar-toggler mx-1" type="button" data-toggle="collapse" data-target="#menu">
             <span class="fa fa-list"></span>
         </button>
-
+        <!-- раскрывающийся блок Поиска -->
         <span class="d-md-none">
             <div class="collapse navbar-collapse" id="search">
                 <ul class="navbar-nav">
-                <li class="nav-item">
-                    <form class="form">
-                        <label for="searchInput">Что вы ищете</label>
-                        <input id="searchInput" class="form-control " type="search" placeholder="Введите слово для поиска">
-                        <label for="searchCategory">Категория</label>
-                        <select class="form-control" id="searchCategory">
-                            <option>Принтеры/копиры</option>
-                            <option>Телефоны</option>
-                            <option>Планшеты</option>
-                            <option>Ноутбуки</option>
-                            <option>Мониторы/телевизоры</option>
-                            <option>Компьютеры/комплектующие</option>
-                            <option>Расходные материалы</option>
-                            <option>Прочее</option>
-                        </select>
-                        <label for="searchCity">Местоположение</label>
-                        <input id="searchCity" class="form-control " type="text" placeholder="Город">
-                        <button class="btn btn-success" type="submit">Поиск</button>
-                        <button class="btn btn-danger" type="submit">Сброс</button>
-                    </form>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <form class="form">
+                            <label for="searchInput">Что вы ищете</label>
+                            <input id="searchInput" class="form-control mb-3" type="search" placeholder="Введите слово для поиска">
+                            <label for="searchCategory">Категория</label>
+                            <select class="form-control mb-3" id="searchCategory">
+                                <option>Принтеры/копиры</option>
+                                <option>Телефоны</option>
+                                <option>Планшеты</option>
+                                <option>Ноутбуки</option>
+                                <option>Мониторы/телевизоры</option>
+                                <option>Компьютеры/комплектующие</option>
+                                <option>Расходные материалы</option>
+                                <option>Прочее</option>
+                            </select>
+                            <label for="searchCity">Местоположение</label>
+                            <input id="searchCity" class="form-control mb-3" type="text" placeholder="Город">
+                            <button class="btn btn-success" type="submit">Поиск</button>
+                            <button class="btn btn-danger" type="submit">Сброс</button>
+                        </form>
+                    </li>
+                </ul>
             </div>
         </span>
-
+        <!-- раскрывающийся блок Аккаунта -->
         <span class="d-md-none">
             <div class="collapse navbar-collapse" id="profile">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Войти</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Зарегистрироваться</a>
-                </li>
-            </ul>
-        </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Зарегистрироваться</a>
+                    </li>
+                </ul>
+            </div>
         </span>
+        <!-- раскрывающийся блок Меню -->
         <span class="d-md-none">
             <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav">
-            <div class="nav-item nav-item-mobile">
-                <a class="nav-link btn btn-success btn-sm" href="#"><i class="fa fa-plus-circle"></i> Добавить объявление</a>
-                <a class="nav-link btn btn-sm btn-danger" href="#"><i class="fa fa-plus-circle"></i> Добавить горячий запрос</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="btn btn-success btn-sm btn-full-width my-2 py-2" href="#page"><span class="fa fa-plus-circle"></span> Добавить объявление</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-sm btn-danger btn-full-width py-2" href="#page"><span class="fa fa-plus-circle"></span> Добавить горячий запрос</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Все объявления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">Обратная связь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page">О компании</a>
+                    </li>
+                </ul>
             </div>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Главная</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все объявления</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Услуги</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Обратная связь</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">О компании</a>
-            </li>
-        </ul>
-    </div>
         </span>
 
     </nav>
 </div>
 
-<!--Основной контент сайта-->
+<!-- Основной контент сайта -->
     <div class="container">
-<!--Верхнее меню-->
-
-<!--Блок поиска-->
+<!-- Блок поиска -->
         <form>
             <div class="row blockSearchMain">
                 <div class="form-row rowSearchMain">
