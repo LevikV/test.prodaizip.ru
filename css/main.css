@@ -48,7 +48,7 @@
     font-size: 13px;
     color: white;
 }
-.modalCategoryDetail .icon i {
+.modalCategoryDetail .icon .fa {
     display: inline-block;
     font-size: 20px;
     line-height: 46px;

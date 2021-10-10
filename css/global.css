@@ -68,7 +68,7 @@ html, body {
     border-radius: 20px;
 }
 /* Мобильное меню */
-.menutop button>span {
+.menutop button > span {
     font-size: 1.6em;
 }
 .menutop .btn-full-width {
