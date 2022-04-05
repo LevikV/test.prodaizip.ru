@@ -11,6 +11,7 @@
     <!-- Корректировка стиля. -->
     <link rel="stylesheet" href="../fonts/stylesheet.css">
     <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/category.css">
     <link rel="stylesheet" href="../css/ads_views.css">
 
@@ -166,53 +167,53 @@
 
     </nav>
 </div>
-<!--Блок поиска-->
-<div class="container">
-    <form action="#">
-        <div class="form-row search_category">
-            <div class="col-12 col-md-4 col-lg-3">
-                <select class="form-control" id="selectCategory">
-                    <option>Принтеры/копиры</option>
-                    <option>--Продажа принтеров/копиров</option>
-                    <option>--Принтеры/копиры на запчасти</option>
-                    <option>--Запчасти для принтеров/копиров</option>
-                    <option>----Блоки лазера/сканера/Сканирующие линейки</option>
-                    <option>----Блоки питания</option>
-                    <option>----Блоки проявки</option>
-                </select>
-            </div>
-            <div class="col-12 col-md-8 col-lg-6">
-                <input type="text" class="form-control" placeholder="Что вы ищете">
-            </div>
-            <div class="col-12 col-md-4 col-lg-2">
-                <input type="text" class="form-control" placeholder="Местоположение">
-            </div>
-            <div class="col-12 col-md-4 col-lg-1">
-                <button type="submit" class="btn btn-warning">Поиск</button>
-            </div>
-        </div>
-    </form>
-</div>
+
 <!--Основной контент сайта-->
-<!-- Хлебные крошки -->
 <div class="container">
+    <!--Блок поиска-->
     <div class="row">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#">Главная</a></li>
-                <li class="breadcrumb-item"><a href="#">Принтеры / копиры</a></li>
-                <li class="breadcrumb-item active">Продажа принтеров / копиров</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!--Блок фильтров и объявлений-->
-<div class="container">
-    <div class="row">
-<!-- Заголовок раздела -->
-        <div class="col-12">
-            <h1>Продажа принтеров / копиров<span>24224 шт.</span></h1>
+        <div class="col">
+        <form action="#">
+            <div class="form-row search-small">
+                <div class="col-12 col-md-4 col-lg-3">
+                    <select class="form-control" id="selectCategory">
+                        <option>Принтеры/копиры</option>
+                        <option>--Продажа принтеров/копиров</option>
+                        <option>--Принтеры/копиры на запчасти</option>
+                        <option>--Запчасти для принтеров/копиров</option>
+                        <option>----Блоки лазера/сканера/Сканирующие линейки</option>
+                        <option>----Блоки питания</option>
+                        <option>----Блоки проявки</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-8 col-lg-6">
+                    <input type="text" class="form-control" placeholder="Что вы ищете">
+                </div>
+                <div class="col-12 col-md-4 col-lg-2">
+                    <input type="text" class="form-control" placeholder="Местоположение">
+                </div>
+                <div class="col-12 col-md-4 col-lg-1">
+                    <button type="submit" class="btn btn-warning">Поиск</button>
+                </div>
+            </div>
+        </form>
         </div>
+    </div>
+    <!-- Хлебные крошки -->
+    <div class="row">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                    <li class="breadcrumb-item"><a href="#">Принтеры / копиры</a></li>
+                    <li class="breadcrumb-item active">Продажа принтеров / копиров</li>
+                </ol>
+            </nav>
+
+    </div>
+    <!-- Заголовок раздела -->
+    <h1>Продажа принтеров / копиров<span>24224 шт.</span></h1>
+    <div class="row">
 <!--Блок фильтров-->
         <div class="col-12 col-sm-4 col-md-3 col-lg-3 order-1 order-sm-0">
             <form>
@@ -398,7 +399,7 @@
             <div class="row justify-content-end sort">
                 <div class="col-3 col-sm-3 col-md-3 col-lg-2">
                     <form action="#">
-                        <select class="form-control form-control-sm" id="quantityAds">
+                        <select class="form-control form-control-sm" id="quantityAds1">
                             <option>Сетка</option>
                             <option>Список</option>
                         </select>
@@ -406,7 +407,7 @@
                 </div>
                 <div class="col-3 col-sm-3 col-md-2 col-lg-2">
                     <form action="#">
-                        <select class="form-control form-control-sm" id="quantityAds">
+                        <select class="form-control form-control-sm" id="quantityAds2">
                             <option>16</option>
                             <option>52</option>
                             <option>100</option>
@@ -731,7 +732,7 @@
     </div>
 </div>
 <!--Подвал сайта-->
-<div class="container-fluid podval">
+<div class="container-fluid footer">
     <div class="row justify-content-around">
         <div class="col-12 text-center priziv">
             <h2>Начните зарабатывать сейчас</h2>
@@ -766,7 +767,7 @@
             <p><a href="#">Кошелек</a></p>
             <p><a href="#">Профиль</a></p>
         </div>
-        <div class="col-12 podvalCopyright">
+        <div class="col-12 footerCopyright">
             <hr>
             <h6>Пользование сервисами сайта, в том числе подача объявлений, означает принятие условий <a href="#">пользовательского соглашения</a></h6>
             <h6>Все права защищены. ProdaiZIP©</h6>

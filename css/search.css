@@ -1,0 +1,17 @@
+/*******************Блок поиска*******************/
+.search-small {
+    margin-top: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-right: 0px;
+    background-color: #0398db;
+    border-radius: 4px;
+}
+.search-small .btn-warning {
+    width: 100%;
+}
+.search-small .col-12 {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

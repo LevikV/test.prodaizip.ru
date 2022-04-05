@@ -1,20 +1,4 @@
-/*******************Блок поиска*******************/
-.search_category {
-    margin-top: 25px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 0;
-    padding-right: 0px;
-    background-color: #0398db;
-    border-radius: 4px;
-}
-.search_category .btn-warning {
-    width: 100%;
-}
-.search_category .col-12 {
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
+
 /* Заголовок общего блока для страницы - общее количество объявлений*/
 h1>span {
     padding-left: 10px;
