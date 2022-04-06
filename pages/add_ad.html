@@ -11,9 +11,9 @@
     <!-- Корректировка стиля. -->
     <link rel="stylesheet" href="../fonts/stylesheet.css">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="../css/category.css">
-    <link rel="stylesheet" href="../css/ads_views.css">
+    <link rel="stylesheet" href="../css/add_ad.css">
+
+
 
     <title>Добавить объявление - Доска объявлений</title>
 </head>
@@ -174,24 +174,95 @@
     <h1 class="text-center">Добавить новое объявление</h1>
     <!-- Блок выбора категории размещения -->
     <div class="row">
-        <div class="col">
-            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Главная</a>
+        <div class="col select-category">
+            <ul class="nav nav-pills nav-fill mt-1 mb-4 text-center" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-print-tab" data-toggle="pill" href="#pills-print" role="tab" aria-controls="pills-print" aria-selected="true">
+                        <span class="fa fa-print"></span>
+                        <p class="mb-0">Принтеры/копиры</p>
+                    </a>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Профиль</a>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-phone-tab" data-toggle="pill" href="#pills-phone" role="tab" aria-controls="pills-phone" aria-selected="false">
+                        <span class="fa fa-phone"></span>
+                        <p class="mb-0">Телефоны</p>
+                    </a>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Контакт</a>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-tablet-tab" data-toggle="pill" href="#pills-tablet" role="tab" aria-controls="pills-tablet" aria-selected="false">
+                        <span class="fa fa-tablet"></span>
+                        <p class="mb-0">Планшеты</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-noutebook-tab" data-toggle="pill" href="#pills-noutebook" role="tab" aria-controls="pills-noutebook" aria-selected="false">
+                        <span class="fa fa-laptop"></span>
+                        <p class="mb-0">Ноутбуки</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-monitor-tab" data-toggle="pill" href="#pills-monitor" role="tab" aria-controls="pills-monitor" aria-selected="false">
+                        <span class="fa fa-tv"></span>
+                        <p class="mb-0">Мониторы/телевизоры</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-computer-tab" data-toggle="pill" href="#pills-computer" role="tab" aria-controls="pills-computer" aria-selected="false">
+                        <span class="fa fa-desktop"></span>
+                        <p class="mb-0">Компьютеры</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-expend-tab" data-toggle="pill" href="#pills-expend" role="tab" aria-controls="pills-expend" aria-selected="false">
+                        <span class="fa fa-leaf"></span>
+                        <p class="mb-0">Расходные материалы</p>
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="pills-other-tab" data-toggle="pill" href="#pills-other" role="tab" aria-controls="pills-other" aria-selected="false">
+                        <span class="fa fa-spinner"></span>
+                        <p class="mb-0">Прочее</p>
+                    </a>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, quis!</div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dicta facilis harum id inventore ipsa quas veritatis? Harum, repudiandae.</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade show active" id="pills-print" role="tabpanel" aria-labelledby="pills-print-tab">
+                    <div class="col">
+                        <form action="#">
+                            <div class="form-row">
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <label for="select-category">Категория:</label>
+                                    <select class="form-control" id="select-category">
+                                        <option>Принтеры/копиры</option>
+                                        <option>Принтеры/копиры на запчасти</option>
+                                        <option>Запчасти для принтеров/копиров</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-md-8 col-lg-7">
+                                    <label for="input-caption">Заголовок объявления:</label>
+                                    <input type="text" id="input-caption" class="form-control" placeholder="Введите заголовок объявления">
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-2">
+                                    <label for="select-type-ad">Тип объявления:</label>
+                                    <select class="form-control" id="select-type-ad">
+                                        <option>Продать</option>
+                                        <option>Купить</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-phone" role="tabpanel" aria-labelledby="pills-phone-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aspernatur dicta facilis harum id inventore ipsa quas veritatis? Harum, repudiandae.</div>
+                <div class="tab-pane fade" id="pills-tablet" role="tabpanel" aria-labelledby="pills-tablet-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade" id="pills-noutebook" role="tabpanel" aria-labelledby="pills-noutebook-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade" id="pills-monitor" role="tabpanel" aria-labelledby="pills-monitor-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade" id="pills-computer" role="tabpanel" aria-labelledby="pills-computer-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade" id="pills-expend" role="tabpanel" aria-labelledby="pills-expend-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                <div class="tab-pane fade" id="pills-other" role="tabpanel" aria-labelledby="pills-other-tab">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
             </div>
         </div>
+
     </div>
 
 </div>

@@ -1,0 +1,19 @@
+/******************* Страница добавления объявления *******************/
+.select-category ul>li {
+    width: 25% !important;
+    max-width: 25% !important;
+}
+.select-category ul {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.select-category p {
+    font-size: 12px;
+}
+.select-category nav-link active {
+    color: #000000;
+    background-color: #cccccc;
+}
+.select-category .fa {
+    font-size: 20px;
+}
