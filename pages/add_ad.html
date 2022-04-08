@@ -308,8 +308,123 @@
                                 <div class="col-lg-3">
                                     <label>Технические характеристики:</label>
                                 </div>
-                                <div class="col-12 col-md-4 col-lg-9">
-                                    <textarea id="input-description" class="form-control" placeholder="Введите описание объявления"></textarea>
+                                <div class="col-12 col-md-4 col-lg-9 tech-options">
+
+                                    <div class="form-row">
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Технология печати</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-primary active form-control-sm">
+                                                            <input type="radio" name="print_tech" id="print-tech-laser" autocomplete="off" checked>Лазерная
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="print_tech" id="print-tech-ink" autocomplete="off">Струйная
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="print_tech" id="print-tech-matrix" autocomplete="off">Матричная
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label for="input-type-printer">Тип устройства</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons" id="input-type-printer">
+                                                        <label class="btn btn-primary active form-control-sm">
+                                                            <input type="radio" name="options" id="type-printer-printer" autocomplete="off" checked>Принтер
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="options" id="type-printer-mfp" autocomplete="off">МФУ
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="options" id="type-printer-duplicator" autocomplete="off">Копир
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Цветность</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-secondary active form-control-sm">
+                                                            <input type="radio" name="options" id="type-print-monochrome" autocomplete="off" checked>Черно-белый
+                                                        </label>
+                                                        <label class="btn btn-warning form-control-sm">
+                                                            <input type="radio" name="options" id="type-print-color" autocomplete="off">Цветной
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Макс. формат печати</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <select class="form-control form-control-sm" id="select-max-format-print">
+                                                        <option>A6</option>
+                                                        <option>A5</option>
+                                                        <option>A4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Двусторонняя печать</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-primary active form-control-sm">
+                                                            <input type="radio" name="print_tech" id="printer-duplex-on" autocomplete="off" checked>Есть
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="print_tech" id="printer-duplex-off" autocomplete="off">Нет
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Автоподатчик оригиналов</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-primary active form-control-sm">
+                                                            <input type="radio" name="print_tech" id="print-auto-scan-on" autocomplete="off" checked>Есть
+                                                        </label>
+                                                        <label class="btn btn-primary form-control-sm">
+                                                            <input type="radio" name="print_tech" id="print-auto-scan-off" autocomplete="off">Нет
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+
+
+
                                 </div>
                             </div>
                         </form>

@@ -17,3 +17,11 @@
 .select-category .fa {
     font-size: 20px;
 }
+
+
+.tech-options .btn {
+    font-size: 0.75rem;
+}
+.tech-options .btn-group {
+    width: 100%;
+}
