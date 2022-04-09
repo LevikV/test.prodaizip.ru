@@ -306,13 +306,21 @@
                             </div>
                             <div class="form-row pt-3">
                                 <div class="col-lg-3">
+                                    <label for="input-address">Место продажи:</label>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-9">
+                                    <input type="text" id="input-address" class="form-control" placeholder="Введите адрес нахождения принтера">
+                                </div>
+                            </div>
+                            <div class="form-row pt-3">
+                                <div class="col-lg-3">
                                     <label>Технические характеристики:</label>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-9 tech-options">
 
                                     <div class="form-row">
                                         <div class="col-4 col-lg-4">
-                                            <div class="form-row">
+                                            <div class="form-row pt-2">
                                                 <div class="col-12">
                                                     <label>Технология печати</label>
                                                 </div>
@@ -371,20 +379,6 @@
                                         <div class="col-4 col-lg-4">
                                             <div class="form-row">
                                                 <div class="col-12">
-                                                    <label>Макс. формат печати</label>
-                                                </div>
-                                                <div class="col-12">
-                                                    <select class="form-control form-control-sm" id="select-max-format-print">
-                                                        <option>A6</option>
-                                                        <option>A5</option>
-                                                        <option>A4</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-lg-4">
-                                            <div class="form-row">
-                                                <div class="col-12">
                                                     <label>Двусторонняя печать</label>
                                                 </div>
                                                 <div class="col-12">
@@ -416,9 +410,79 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Макс. формат печати</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <select class="form-control form-control-sm" id="select-max-format-print">
+                                                        <option>A6</option>
+                                                        <option>A5</option>
+                                                        <option>A4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Интерфейсы подключения</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="printer-interface-usb">
+                                                        <label class="form-check-label" for="printer-interface-usb">
+                                                            USB
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="printer-interface-com">
+                                                        <label class="form-check-label" for="printer-interface-com">
+                                                            COM (LPT)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="printer-interface-lan">
+                                                        <label class="form-check-label" for="printer-interface-lan">
+                                                            LAN (RJ-45)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="printer-interface-wifi">
+                                                        <label class="form-check-label" for="printer-interface-wifi">
+                                                            Wi-Fi
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="printer-interface-bt">
+                                                        <label class="form-check-label" for="printer-interface-bt">
+                                                            Bluetooth
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Комплектация</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <textarea rows="5" id="input-printer-complect" class="form-control form-control-sm" placeholder="Укажите, что идет в комплекте с принтером: картридж, кабель питания, подключения и т.п."></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-lg-4">
+                                            <div class="form-row">
+                                                <div class="col-12">
+                                                    <label>Пробег (отпечатано страниц)</label>
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="text" id="input-printer-probeg" class="form-control form-control-sm" placeholder="15000">
+                                                </div>
+                                            </div>
+                                        </div>
 
 
                                     </div>
@@ -427,6 +491,8 @@
 
                                 </div>
                             </div>
+
+
                         </form>
                     </div>
                 </div>
