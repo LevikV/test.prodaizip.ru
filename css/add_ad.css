@@ -55,4 +55,7 @@
     width: 100%;
     height: 100%;
 }
+.upload-new input {
+    display: none;
+}
 /*******************  *******************/
