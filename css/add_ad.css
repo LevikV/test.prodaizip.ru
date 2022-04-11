@@ -41,6 +41,7 @@
 .remove-image .fa {
     font-size: 20px;
 }
+/*******************  *******************/
 .upload-new {
     width: 110px;
     height: 110px;
@@ -51,11 +52,11 @@
 .upload-new .fa {
     font-size: 50px;
 }
-.upload-new a {
-    width: 100%;
-    height: 100%;
-}
 .upload-new input {
     display: none;
+}
+.upload-new:hover {
+    cursor: pointer;
+    color: #03a9f4;
 }
 /*******************  *******************/
