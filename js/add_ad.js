@@ -2,6 +2,7 @@ $('.upload-new>.row').on('click', function() {
     $('#image-add').trigger('click');
 });
 
+
 $('#select-type-ad').change(function() {
     var val = $('#select-type-ad').val();
     if (val == 'Продать') {
@@ -9,6 +10,43 @@ $('#select-type-ad').change(function() {
     } else {
         $('.safe-trade').css('display', 'none');
     }
+});
 
 
+$('#select-category').change(function() {
+    var val = $('#select-category').val();
+    if (val == '1') {
+        $('.tech-options').css('display', 'flex');
+        $('.part-options').css('display', 'none');
+    }
+    if (val == '2') {
+        $('.tech-options').css('display', 'flex');
+        $('.part-options').css('display', 'none');
+    }
+    if (val == '3') {
+        $('.tech-options').css('display', 'none');
+        $('.part-options').css('display', 'flex');
+    }
+});
+
+
+$('#select-vendor').change(function() {
+    var val = $('#select-vendor').val();
+    if (val == '3') {
+        $('.user-vendor').css('display', 'block');
+    } else {
+        $('.user-vendor').css('display', 'none');
+    }
+});
+
+
+$('#safe-trade-on').on('click', function() {
+    $('.safe-trade-off-info').css('display', 'none');
+    $('.safe-trade-not-access').css('display', 'block');
+});
+
+
+$('#safe-trade-off').on('click', function() {
+    $('.safe-trade-off-info').css('display', 'block');
+    $('.safe-trade-not-access').css('display', 'none');
 });

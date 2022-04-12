@@ -26,6 +26,14 @@
     width: 100%;
 }
 /*******************  *******************/
+.part-options {
+    display: none;
+}
+.user-vendor {
+    display: none;
+}
+
+/*******************  *******************/
 .upload-images {
     position: relative;
 }
@@ -60,3 +68,9 @@
     color: #03a9f4;
 }
 /*******************  *******************/
+.safe-trade .btn-group {
+    width: 100%;
+}
+.safe-trade-not-access {
+    display: none;
+}

@@ -233,9 +233,10 @@
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <label for="select-category">Категория:</label>
                                     <select class="form-control" id="select-category">
-                                        <option>Принтеры/копиры</option>
-                                        <option>Принтеры/копиры на запчасти</option>
-                                        <option>Запчасти для принтеров/копиров</option>
+                                        <option disabled selected>Выберите категорию</option>
+                                        <option value="1">Принтеры/копиры</option>
+                                        <option value="2">Принтеры/копиры на запчасти</option>
+                                        <option value="3">Запчасти для принтеров/копиров</option>
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-8 col-lg-7">
@@ -247,6 +248,19 @@
                                     <select class="form-control" id="select-type-ad">
                                         <option>Продать</option>
                                         <option>Купить</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row pt-3 part-options">
+                                <div class="col-lg-3">
+                                    <label for="select-subcategory">Подкатегория:</label>
+                                </div>
+                                <div class="col-lg-3">
+                                    <select class="form-control" id="select-subcategory">
+                                        <option disabled selected>Выберите категорию запчасти</option>
+                                        <option value="1">Платы форматтера</option>
+                                        <option value="2">Шарниры</option>
+                                        <option value="3">Блоки лазера</option>
                                     </select>
                                 </div>
                             </div>
@@ -286,6 +300,21 @@
                             </div>
                             <div class="form-row pt-3">
                                 <div class="col-lg-3">
+                                    <label for="select-vendor">Вендор:</label>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <select class="form-control" id="select-vendor">
+                                        <option value="1">HP</option>
+                                        <option value="2">Canon</option>
+                                        <option value="3">Свой вариант</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 user-vendor">
+                                    <input type="text" id="input-user-vendor" class="form-control" placeholder="Введите вендора">
+                                </div>
+                            </div>
+                            <div class="form-row pt-3 tech-options">
+                                <div class="col-lg-3">
                                     <label for="select-model">Модель:</label>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-3">
@@ -309,25 +338,42 @@
                                     <label for="input-address">Место продажи:</label>
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-9">
-                                    <input type="text" id="input-address" class="form-control" placeholder="Введите адрес нахождения принтера">
+                                    <input type="text" id="input-address" class="form-control" placeholder="Введите адрес нахождения принтера или ЗИП">
                                 </div>
                             </div>
                             <div class="form-row pt-3 safe-trade">
                                 <div class="col-lg-3">
-                                    <label for="select-safe-trade">Безопасная сделка:</label>
+                                    <label>Безопасная сделка:</label>
                                 </div>
-                                <div class="col-12 col-md-4 col-lg-3">
-                                    <select class="form-control" id="select-safe-trade">
-                                        <option>Новое</option>
-                                        <option>Б/У</option>
-                                    </select>
+                                <div class="col-lg-9">
+                                    <div class="form-row">
+                                        <div class="col-4">
+                                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                <label class="btn btn-success active btn-sm form-control-sm">
+                                                    <input type="radio" name="safe_trade" id="safe-trade-on" autocomplete="off">Да
+                                                </label>
+                                                <label class="btn btn-success btn-sm form-control-sm">
+                                                    <input type="radio" name="safe_trade" id="safe-trade-off" autocomplete="off" checked>Нет
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 safe-trade-not-access">
+                                            В вашем регионе "Безопасная сделка" недоступна
+                                        </div>
+                                        <div class="col-12 border border-primary rounded p-1 mt-2 safe-trade-off-info">
+                                            <p>Повысьте уровень доверия покупателя к вашему объявлению, выбрав услугу "Безопасная сделка".</p>
+                                            <a href="#page" target="_blank">Подробнее</a>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-row pt-3">
+                            <div class="form-row pt-3 tech-options">
                                 <div class="col-lg-3">
                                     <label>Технические характеристики:</label>
                                 </div>
-                                <div class="col-12 col-md-4 col-lg-9 tech-options">
+                                <div class="col-lg-9">
 
                                     <div class="form-row">
 
@@ -503,6 +549,45 @@
 
                                 </div>
                             </div>
+                            <div class="form-row pt-3 part-options">
+                                <div class="col-lg-3">
+                                    <label>Дополнительно:</label>
+                                </div>
+                                <div class="col-lg-9">
+
+                                    <div class="form-row">
+
+                                        <div class="col-6 col-lg-6">
+                                            <div class="form-row pt-2">
+                                                <div class="col-12">
+                                                    <label>Совместимые парт-номера</label>
+                                                </div>
+                                                <div class="col-12">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-lg-6">
+                                            <div class="form-row pt-2">
+                                                <div class="col-12">
+                                                    <label>Совместимые модели принтеров</label>
+                                                </div>
+                                                <div class="col-12">
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
                             <div class="form-row pt-3">
                                 <div class="col-lg-3">
                                     <label>Фотографии:</label>
