@@ -292,13 +292,16 @@
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <select class="form-control" id="select-manufacturer">
-                                        <option>HP</option>
-                                        <option>Canon</option>
-                                        <option>Свой вариант</option>
+                                        <option value="1">HP</option>
+                                        <option value="2">Canon</option>
+                                        <option value="3">Свой вариант</option>
                                     </select>
                                 </div>
+                                <div class="col-lg-4 user-manufacturer">
+                                    <input type="text" id="input-user-manufacturer" class="form-control" placeholder="Введите производителя">
+                                </div>
                             </div>
-                            <div class="form-row pt-3">
+                            <div class="form-row pt-3 part-options">
                                 <div class="col-lg-3">
                                     <label for="select-vendor">Вендор:</label>
                                 </div>
@@ -319,10 +322,13 @@
                                 </div>
                                 <div class="col-12 col-md-4 col-lg-3">
                                     <select class="form-control" id="select-model">
-                                        <option>LJ 1010</option>
-                                        <option>LJ 1200</option>
-                                        <option>Свой вариант</option>
+                                        <option value="1">LJ 1010</option>
+                                        <option value="2">LJ 1200</option>
+                                        <option value="3">Свой вариант</option>
                                     </select>
+                                </div>
+                                <div class="col-lg-4 user-model">
+                                    <input type="text" id="input-user-model" class="form-control" placeholder="Введите модель">
                                 </div>
                             </div>
                             <div class="form-row pt-3">
@@ -562,8 +568,11 @@
                                                 <div class="col-12">
                                                     <label>Совместимые парт-номера</label>
                                                 </div>
-                                                <div class="col-12">
-
+                                                <div class="col-10">
+                                                    <input type="text" id="input-part-number-compability" class="form-control form-control-sm" placeholder="Введите парт номер">
+                                                </div>
+                                                <div class="col-2">
+                                                    <button type="button" class="btn btn-primary btn-sm">ADD</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -573,7 +582,7 @@
                                                     <label>Совместимые модели принтеров</label>
                                                 </div>
                                                 <div class="col-12">
-
+                                                    <button type="button" class="btn btn-primary btn-sm">ADD</button>
                                                 </div>
                                             </div>
                                         </div>

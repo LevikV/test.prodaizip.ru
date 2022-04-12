@@ -29,10 +29,10 @@
 .part-options {
     display: none;
 }
-.user-vendor {
+/*******************  *******************/
+.user-vendor, .user-manufacturer, .user-model {
     display: none;
 }
-
 /*******************  *******************/
 .upload-images {
     position: relative;

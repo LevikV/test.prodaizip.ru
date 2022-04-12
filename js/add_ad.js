@@ -40,6 +40,26 @@ $('#select-vendor').change(function() {
 });
 
 
+$('#select-manufacturer').change(function() {
+    var val = $('#select-manufacturer').val();
+    if (val == '3') {
+        $('.user-manufacturer').css('display', 'block');
+    } else {
+        $('.user-manufacturer').css('display', 'none');
+    }
+});
+
+
+$('#select-model').change(function() {
+    var val = $('#select-model').val();
+    if (val == '3') {
+        $('.user-model').css('display', 'block');
+    } else {
+        $('.user-model').css('display', 'none');
+    }
+});
+
+
 $('#safe-trade-on').on('click', function() {
     $('.safe-trade-off-info').css('display', 'none');
     $('.safe-trade-not-access').css('display', 'block');
