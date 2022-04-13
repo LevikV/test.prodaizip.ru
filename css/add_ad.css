@@ -29,10 +29,23 @@
 .part-options {
     display: none;
 }
+.part-options .fa-times {
+    font-size: 14px;
+    color: #b21f2d;
+}
+.part-options .fa-times:hover {
+    cursor: pointer;
+}
+.part-options .fa-plus-circle {
+    font-size: 16px;
+    color: #ffffff;
+}
 /*******************  *******************/
 .user-vendor, .user-manufacturer, .user-model {
     display: none;
 }
+/*******************  *******************/
+
 /*******************  *******************/
 .upload-images {
     position: relative;

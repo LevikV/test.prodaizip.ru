@@ -316,6 +316,14 @@
                                     <input type="text" id="input-user-vendor" class="form-control" placeholder="Введите вендора">
                                 </div>
                             </div>
+                            <div class="form-row pt-3 part-options">
+                                <div class="col-lg-3">
+                                    <label for="input-part-number">Парт номер:</label>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <input type="text" id="input-part-number" class="form-control" placeholder="Введите парт номер">
+                                </div>
+                            </div>
                             <div class="form-row pt-3 tech-options">
                                 <div class="col-lg-3">
                                     <label for="select-model">Модель:</label>
@@ -568,21 +576,489 @@
                                                 <div class="col-12">
                                                     <label>Совместимые парт-номера</label>
                                                 </div>
-                                                <div class="col-10">
+                                                <div class="col-10 mb-3">
                                                     <input type="text" id="input-part-number-compability" class="form-control form-control-sm" placeholder="Введите парт номер">
                                                 </div>
-                                                <div class="col-2">
-                                                    <button type="button" class="btn btn-primary btn-sm">ADD</button>
+                                                <div class="col-2 mb-3">
+                                                    <button type="button" class="btn btn-warning btn-sm w-100"><span class="fa fa-plus-circle"></span></button>
                                                 </div>
+
+                                                <div class="col-6 p-2">
+                                                    <div class="p-1 border border-warning rounded">
+                                                        <p class="m-0 d-inline-block w-75 text-left align-top">RM1-3758-000CN</p>
+                                                        <span class="d-inline-block float-right text-right fa fa-times"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <div class="p-1 border border-warning rounded">
+                                                        <p class="m-0 d-inline-block w-75 text-left align-top">CE683-60001</p>
+                                                        <span class="d-inline-block float-right text-right fa fa-times"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <div class="p-1 border border-warning rounded">
+                                                        <p class="m-0 d-inline-block w-75 text-left align-top">JC92-02404A</p>
+                                                        <span class="d-inline-block float-right text-right fa fa-times"></span>
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="col-6 col-lg-6">
                                             <div class="form-row pt-2">
                                                 <div class="col-12">
-                                                    <label>Совместимые модели принтеров</label>
+                                                    <label>Подходит для принтеров</label>
                                                 </div>
-                                                <div class="col-12">
-                                                    <button type="button" class="btn btn-primary btn-sm">ADD</button>
+                                                <div class="col-12 mb-3">
+                                                    <button type="button" class="btn btn-primary btn-sm w-100" data-toggle="modal" data-target="#compability-model-modal">Добавить совместимый принтер</button>
+                                                    <div class="modal fade" id="compability-model-modal" tabindex="-1" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-scrollable">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Походящие модели принтеров</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-12 mb-2">
+                                                                            <select class="form-control" id="select-brand-compability">
+                                                                                <option disabled selected>Выберите брэнд принтера</option>
+                                                                                <option value="1">HP</option>
+                                                                                <option value="2">Canon</option>
+                                                                                <option value="3">Samsung</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="1" id="Check1">
+                                                                                <label class="form-check-label" for="Check1">
+                                                                                    LJ 1010
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2" id="Check2" checked>
+                                                                                <label class="form-check-label" for="Check2">
+                                                                                    LJ 1200
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2" id="Check3" checked>
+                                                                                <label class="form-check-label" for="Check3">
+                                                                                    MFP 1132
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-6 mt-1">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input" type="checkbox" value="2">
+                                                                                <label class="form-check-label">
+                                                                                    Models printer
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                                                                    <button type="button" class="btn btn-primary">Сохранить изменения</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <div class="p-1 border border-primary rounded">
+                                                        <p class="m-0 d-inline-block w-75 text-left align-top">HP LJ 1200</p>
+                                                        <span class="d-inline-block float-right text-right fa fa-times"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 p-2">
+                                                    <div class="p-1 border border-primary rounded">
+                                                        <p class="m-0 d-inline-block w-75 text-left align-top">HP MFP 1132</p>
+                                                        <span class="d-inline-block float-right text-right fa fa-times"></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
