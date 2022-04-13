@@ -40,6 +40,12 @@
     font-size: 16px;
     color: #ffffff;
 }
+.btn-add-compabil-model, .btn-add-compabil-model:hover {
+    background: #ffffff;
+}
+.btn-add-compabil-model .fa {
+    color: #686868;
+}
 /*******************  *******************/
 .user-vendor, .user-manufacturer, .user-model {
     display: none;
