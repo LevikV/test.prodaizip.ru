@@ -40,11 +40,23 @@
     font-size: 16px;
     color: #ffffff;
 }
-.btn-add-compabil-model, .btn-add-compabil-model:hover {
-    background: #ffffff;
+.btn-add-compabil-model,
+.btn-add-compabil-model:hover,
+.btn-add-compabil-model:active,
+.btn-add-compabil-model:focus,
+.btn-add-compabil-part,
+.btn-add-compabil-part:hover,
+.btn-add-compabil-part:active,
+.btn-add-compabil-part:focus {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
-.btn-add-compabil-model .fa {
+.btn-add-compabil-part .fa {
     color: #686868;
+}
+.input-compabil-part:focus {
+    border: orange;
+    box-shadow: 1px 1px 2px 0 orange;
 }
 /*******************  *******************/
 .user-vendor, .user-manufacturer, .user-model {
