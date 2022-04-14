@@ -22,9 +22,7 @@
 .tech-options .btn {
     font-size: 0.75rem;
 }
-.tech-options .btn-group {
-    width: 100%;
-}
+
 /*******************  *******************/
 .part-options {
     display: none;
@@ -56,7 +54,7 @@
 }
 .input-compabil-part:focus {
     border: orange;
-    box-shadow: 1px 1px 2px 0 orange;
+    box-shadow: 0 0 10px 0 orange;
 }
 /*******************  *******************/
 .user-vendor, .user-manufacturer, .user-model {
@@ -85,9 +83,7 @@
     width: 110px;
     height: 110px;
 }
-.upload-new .row {
-    height: 100%;
-}
+
 .upload-new .fa {
     font-size: 50px;
 }
@@ -99,9 +95,7 @@
     color: #03a9f4;
 }
 /*******************  *******************/
-.safe-trade .btn-group {
-    width: 100%;
-}
+
 .safe-trade-not-access {
     display: none;
 }
