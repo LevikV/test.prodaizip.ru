@@ -147,7 +147,15 @@
     color: #ffc107;
     font-size: 12px;
 }
+/*******************  *******************/
 .ad-secondary-text {
     color: #686868;
     font-size: 12px;
+}
+/*******************  *******************/
+.ad-thumb:hover .btn-ask {
+    display: block;
+}
+.btn-ask {
+    display: none;
 }
