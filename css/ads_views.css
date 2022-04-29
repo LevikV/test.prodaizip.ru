@@ -153,6 +153,12 @@
     font-size: 12px;
 }
 /*******************  *******************/
+.ad-thumb p {
+    font-size: 12px;
+}
+.ad-thumb:hover {
+    background: #eeeeee;
+}
 .ad-thumb:hover .btn-ask {
     display: block;
 }
