@@ -155,9 +155,14 @@
 /*******************  *******************/
 .ad-thumb p {
     font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
 }
 .ad-thumb:hover {
     background: #eeeeee;
+    cursor: pointer;
 }
 .ad-thumb:hover .btn-ask {
     display: block;
