@@ -177,3 +177,10 @@
     background: #03a9f4;
     color: #ffffff;
 }
+
+.short-descrip-on .short-descrip {
+    display: block;
+}
+.short-descrip-off .short-descrip {
+    display: none;
+}

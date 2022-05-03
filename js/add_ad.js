@@ -80,3 +80,21 @@ $('#payment-method-cashless').on('click', function() {
     $('.payment-method-wallet').css('display', 'none');
     $('.payment-method-cashless').css('display', 'block');
 });
+
+$('#switch-top-color').click(function(){
+    if ($(this).is(':checked')){
+        $('.ad-thumb').addClass('top-color');
+    } else {
+        $('.ad-thumb').removeClass('top-color');
+    }
+});
+
+$('#switch-top-descrip').click(function(){
+    if ($(this).is(':checked')){
+        $('.ad-thumb').addClass('short-descrip-on');
+        $('.ad-thumb').removeClass('short-descrip-off');
+    } else {
+        $('.ad-thumb').addClass('short-descrip-off');
+        $('.ad-thumb').removeClass('short-descrip-on');
+    }
+});
