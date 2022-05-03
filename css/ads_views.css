@@ -170,3 +170,10 @@
 .btn-ask {
     display: none;
 }
+.top-color {
+    background: #eeeeee;
+}
+.top-color .ad-caption {
+    background: #03a9f4;
+    color: #ffffff;
+}

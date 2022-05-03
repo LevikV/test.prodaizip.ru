@@ -70,3 +70,13 @@ $('#safe-trade-off').on('click', function() {
     $('.safe-trade-off-info').css('display', 'block');
     $('.safe-trade-not-access').css('display', 'none');
 });
+
+$('#payment-method-wallet').on('click', function() {
+    $('.payment-method-cashless').css('display', 'none');
+    $('.payment-method-wallet').css('display', 'block');
+});
+
+$('#payment-method-cashless').on('click', function() {
+    $('.payment-method-wallet').css('display', 'none');
+    $('.payment-method-cashless').css('display', 'block');
+});

@@ -205,14 +205,14 @@
         </div>
         <div class="col-lg-9">
 
-            <div class="row mb-2 pt-3 pb-3 rounded ad-thumb">
+            <div class="row mb-2 pt-3 pb-3 rounded ad-thumb top-color">
                 <div class="col-3 align-self-start">
                     <img class="img-fluid rounded" src="../img/thumb_150x190_printer_.jpg">
                 </div>
                 <div class="col-6">
                     <div class="row h-100">
                         <div class="col-12 align-self-start">
-                            <h6>Продам МФУ SCX-4200 как новый</h6>
+                            <h6 class="ad-caption">Продам МФУ SCX-4200 как новый</h6>
                             <div class="ad-secondary-text">Samsung</div>
                             <div class="ad-secondary-text">SCX-4200</div>
                             <p class="mb-0">Отличный МФУ (принтер, сканер и копир, 3 в 1) для дома и учебы! Так же отлично подойдет для офиса.</p>
@@ -279,10 +279,10 @@
     <!-- строка инфо срока размещения -->
     <div class="row pt-3">
         <div class="col-lg-3">
-            <label>Период размещения:</label>
+            <label>Срок размещения:</label>
         </div>
         <div class="col-9">
-            14 суток
+            30 дней
         </div>
     </div>
 
@@ -296,7 +296,7 @@
         </div>
     </div>
 
-    <!-- строка итого к оплате -->
+    <!-- строка способ оплаты -->
     <div class="row pt-3">
         <div class="col-lg-3">
             <label>Способ оплаты:</label>
@@ -314,10 +314,38 @@
                     Безналичный рассчет
                 </label>
             </div>
-
+            <div class="mt-1 p-2 payment-method-wallet">
+                <div>
+                    Ваш баланс: 80 ₽
+                </div>
+                <div>
+                    <a class="text-danger" href="$page">Недостаточно средств, пополните баланс</a>
+                </div>
+            </div>
+            <div class="mt-1 p-2 payment-method-cashless">
+                <img src="../img/icons/logo_payments_jcb.png">
+                <img src="../img/icons/logo_payments_mir.png">
+                <img src="../img/icons/logo_payments_mastercard.png">
+                <img src="../img/icons/logo_payments_sber.png">
+                <img src="../img/icons/logo_payments_visa.png">
+            </div>
         </div>
     </div>
 
+    <!-- строка условия и соглашения -->
+    <div class="row pt-3">
+        <div class="col-lg-3">
+            <label>Условия и соглашения:</label>
+        </div>
+        <div class="col-9">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="check-accept">
+                <label class="form-check-label" for="check-accept">
+                    Согласен с <a href="#page" target="_blank" >условиями и правилами</a> размещения объявления.
+                </label>
+            </div>
+        </div>
+    </div>
 
 
     <!-- строка кнопок редактировать и опубликовать -->
