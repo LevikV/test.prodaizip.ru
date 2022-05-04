@@ -104,9 +104,3 @@
 .payment-method-cashless {
     display: none;
 }
-.payment-method-wallet a {
-    font-size: 10px;
-}
-.payment-method-wallet a:hover {
-    text-decoration: none;
-}
