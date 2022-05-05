@@ -171,15 +171,38 @@
 
 <!--Основной контент сайта-->
 <div class="container">
+    <!-- Хлебные крошки -->
+    <div class="row">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#page">Главная</a></li>
+                <li class="breadcrumb-item"><a href="#page">Личный кабинет</a></li>
+                <li class="breadcrumb-item active">Успешная оплата</li>
+            </ol>
+        </nav>
+    </div>
     <!-- Заголовок раздела -->
     <h1 class="text-center">Оплата прошла успешно!</h1>
-    <!-- строка предпросмотра объявления -->
-    <div class="row pt-3">
-        <div class="col-lg-3">
-            <label>Объявление:</label>
-        </div>
-        <div class="col-lg-9">
 
+    <div class="row pt-3">
+        <!-- Левая колонка -->
+        <div class="col-lg-3">
+            <a href="#page" class="d-block mb-2 text-decoration-none">Мои объявления</a>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Мои запросы</a>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Мои сделки</a>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Мои отзывы</a>
+            <hr>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Сообщения</a>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Уведомления</a>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Избранное</a>
+            <hr>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Мой кошелек</a>
+            <hr>
+            <a href="#page" class="d-block mb-2 text-decoration-none">Настройки профиля</a>
+        </div>
+        <!-- Центральная основная колонка -->
+        <div class="col-lg-9">
+            <!-- строка предпросмотра объявления -->
             <div class="row mb-2 pt-3 pb-3 rounded ad-thumb short-descrip-off">
                 <div class="col-3 align-self-start">
                     <img class="img-fluid rounded" src="../img/thumb_150x190_printer_.jpg">
@@ -223,144 +246,23 @@
                     </div>
                 </div>
             </div>
-
-
-        </div>
-    </div>
-
-    <!-- строка инфо размещения -->
-    <div class="row pt-3">
-        <div class="offset-3 col-9">
-            Ваше объявление успешно оплачено и вскоре появится в списке объявлений, после проверки нашим модератором.
-        </div>
-        <div class="offset-3 col-9 pt-2">
-            Выбранные услуги продвижения:
-            <ul>
-                <li>Удерживать в ТОПе - до 12.05.2022г.</li>
-                <li>Выделить цветом - до 12.05.2022г.</li>
-                <li>Горячий поиск - до 12.05.2022г.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- строка выбора услуг продвижения -->
-    <div class="row pt-3">
-        <div class="col-lg-3">
-            <label>Услуги продвижения:</label>
-        </div>
-        <div class="col-9">
-            <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="switch-top-rate">
-                <label class="custom-control-label" for="switch-top-rate">Удерживать в ТОПе 7 дней - 100 ₽</label>
-            </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="switch-top-color">
-                <label class="custom-control-label" for="switch-top-color">Выделить цветом на 7 дней - 50 ₽</label>
-            </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="switch-top-vip">
-                <label class="custom-control-label" for="switch-top-vip">Поместить в блок VIP на 7 дней - 100 ₽</label>
-            </div>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="switch-top-descrip">
-                <label class="custom-control-label" for="switch-top-descrip">Показать краткое описание на 14 дней - 20 ₽</label>
-            </div>
-            <div class="custom-control custom-switch text-danger">
-                <input type="checkbox" class="custom-control-input" id="switch-fast-search">
-                <label class="custom-control-label" for="switch-fast-search">Горячий поиск на 7 дней - 50 ₽</label>
-                <button class="btn btn-link text-decoration-none h6 mb-0 p-0 text-secondary" type="button" data-toggle="collapse" data-target="#fast-search-info" aria-expanded="false" aria-controls="fast-search-info">
-                    Подробнее
-                </button>
-            </div>
-            <div class="collapse" id="fast-search-info">
-                <div class="card card-body shadow mt-2">
+            <!-- строка инфо размещения -->
+            <div class="row pt-3">
+                <div class="col-12">
+                    Ваше объявление успешно оплачено и вскоре появится в списке объявлений, после проверки нашим модератором.
+                </div>
+                <div class="col-12 pt-2">
+                    <p class="m-0">Выбранные услуги продвижения:</p>
                     <ul>
-                        <li>Данная услуга отправит запрос на поиск необходимой вам запчасти или оборудования всем нашим сервис партнерам по всей России и наши партнеры смогут проверить наличие запчасти на своих складах;</li>
-                        <li>Ваш запрос так же будет отображен на главной странице в специальном блоке "Горячих запросов";</li>
-                        <li>Так же из нашей базы объявлений будут подобраны и предоставлены наиболее подходящие для вас варианты;</li>
+                        <li>Удерживать в ТОПе - до 12.05.2022г.</li>
+                        <li>Выделить цветом - до 12.05.2022г.</li>
+                        <li>Горячий поиск - до 12.05.2022г.</li>
                     </ul>
-                    Все это значительно увеличит шансы найти то, что вы ищите!
+                    <p>Срок публикации объявления - до 25.05.2022г.</p>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <!-- строка итого к оплате -->
-    <div class="row pt-3">
-        <div class="col-lg-3">
-            <label>Итого к оплате:</label>
-        </div>
-        <div class="col-9 h4">
-            100 ₽
-        </div>
-    </div>
-
-    <!-- строка способ оплаты -->
-    <div class="row pt-3">
-        <div class="col-lg-3">
-            <label>Способ оплаты:</label>
-        </div>
-        <div class="col-9">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment-method" id="payment-method-wallet" value="wallet" checked>
-                <label class="form-check-label" for="payment-method-wallet">
-                    Кошелек аккаунта
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="payment-method" id="payment-method-cashless" value="cashless">
-                <label class="form-check-label" for="payment-method-cashless">
-                    Безналичный рассчет
-                </label>
-            </div>
-            <div class="mt-1 p-2 payment-method-wallet">
-                <div>
-                    Ваш баланс: 80 ₽
-                </div>
-                <div>
-                    <a class="text-danger text-decoration-none h6 mb-0" href="$page">Недостаточно средств, пополните баланс</a>
-                </div>
-            </div>
-            <div class="mt-1 p-2 payment-method-cashless">
-                <img src="../img/icons/logo_payments_jcb.png">
-                <img src="../img/icons/logo_payments_mir.png">
-                <img src="../img/icons/logo_payments_mastercard.png">
-                <img src="../img/icons/logo_payments_sber.png">
-                <img src="../img/icons/logo_payments_visa.png">
-            </div>
-        </div>
-    </div>
-
-    <!-- строка условия и соглашения -->
-    <div class="row pt-3">
-        <div class="col-lg-3">
-            <label>Условия и соглашения:</label>
-        </div>
-        <div class="col-9">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="1" id="check-accept">
-                <label class="form-check-label" for="check-accept">
-                    Согласен с <a href="#page" target="_blank" >условиями и правилами</a> размещения объявления.
-                </label>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- строка кнопок редактировать и опубликовать -->
-    <div class="form-row pt-4 pb-3">
-        <div class="offset-3 col-lg-3">
-            <button type="button" class="btn btn-secondary w-100">< Редактировать</button>
-        </div>
-        <div class="col-lg-3">
-            <button type="submit" class="btn btn-primary w-100">Опубликовать</button>
-        </div>
-    </div>
-
-
-
 </div>
 <!--Подвал сайта-->
 <div class="container-fluid footer">
