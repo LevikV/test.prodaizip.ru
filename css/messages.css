@@ -4,3 +4,44 @@
 }
 
 /*******************  *******************/
+.chat-thumb:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+.chat-thumb-caption {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-thumb-seller-name {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-thumb-message {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-thumb-price {
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chat-thumb-delete {
+    line-height: 0.5;
+    font-size: 16px;
+    color: #bebebe;
+}
+/******************* Эффект мигания сообщения *******************/
+.blink {
+    animation: blink 2s infinite; /* Параметры анимации */
+}
+@keyframes blink {
+    from { opacity: 1; /* Непрозрачный текст */ }
+    to { opacity: 0; /* Прозрачный текст */ }
+}
