@@ -2,6 +2,9 @@
 .messages-box {
     height: 500px;
 }
+.btn-send-message {
+    font-size: 18px;
+}
 
 /*******************  *******************/
 .chat-thumb:hover {
