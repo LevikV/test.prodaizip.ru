@@ -1,14 +1,20 @@
 /******************* Стили для сообщений *******************/
 .messages-box {
-    height: 500px;
+    height: 445px;
 }
+.chat-box {
+     height: 500px;
+ }
 .btn-send-message {
     font-size: 18px;
 }
 .btn-add-file-message {
     font-size: 18px;
 }
-
+.message {
+    max-width: 90%;
+    font-size: 14px;
+}
 /*******************  *******************/
 .chat-thumb:hover {
     background: #eeeeee;

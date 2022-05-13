@@ -17,8 +17,16 @@ html, body {
 .h4 {
     font-size: 16px;
 }
-
+.border-light {
+    border-color: #e9ecef !important;
+}
 /**/
+.bg-light-blue {
+    background: #dbf1ff;
+}
+
+
+
 /************************ Навигационное меню ************************/
 /**/
 /* Десктопное меню */
