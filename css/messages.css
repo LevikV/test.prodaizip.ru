@@ -16,6 +16,9 @@
     font-size: 14px;
 }
 /*******************  *******************/
+.chat-active {
+    background: #eeeeee;
+}
 .chat-thumb:hover {
     background: #eeeeee;
     cursor: pointer;
