@@ -232,19 +232,87 @@
         <div class="col-lg-9 mb-3">
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="active-ad-tab" data-bs-toggle="tab" data-bs-target="#active-ads" type="button" role="tab" aria-controls="active-ads" aria-selected="true">Активные</button>
+                    <a href="#active-ads" class="nav-link active" id="active-ad-tab" data-toggle="tab" role="tab" aria-controls="active-ads" aria-selected="true">Активные - 2</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="draft-ad-tab" data-bs-toggle="tab" data-bs-target="#draft-ads" type="button" role="tab" aria-controls="draft-ads" aria-selected="false">Черновики</button>
+                    <a href="#draft-ads" class="nav-link" id="draft-ad-tab" data-toggle="tab" role="tab" aria-controls="draft-ads" aria-selected="false">Черновики - 0</a>
                 </li>
-
+                <li class="nav-item" role="presentation">
+                    <a href="#archive-ads" class="nav-link" id="archive-ad-tab" data-toggle="tab" role="tab" aria-controls="archive-ads" aria-selected="false">Архив - 1</a>
+                </li>
             </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="active-ads" role="tabpanel" aria-labelledby="active-ad-tab">
-                    ...
+            <div class="row">
+                <div class="col-6 pt-3">Поиск по объявлениям</div>
+                <div class="col-6 pt-3">Фильтр по категориям</div>
+                <div class="col-6">
+                    <input type="text" class="form-control form-control-sm" placeholder="Введите слово или фразу для поиска">
                 </div>
+                <div class="col-6">
+                    <select class="form-control form-control-sm" id="select-category">
+                        <option disabled selected>Выберите категорию объявления</option>
+                        <option value="2">Запчасти для принтеров/копиров</option>
+                        <option value="3">Ноутбуки</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tab-content pt-3">
+                <!-- Вкладка активные объявления -->
+                <div class="tab-pane fade show active" id="active-ads" role="tabpanel" aria-labelledby="active-ad-tab">
+                    <!-- объявление -->
+                    <div class="row mb-2 pt-3 pb-3 rounded ad-thumb">
+                        <div class="col-3 align-self-start">
+                            <img class="img-fluid rounded" src="../img/thumb_150x190_printer_.jpg">
+                        </div>
+                        <div class="col-6">
+                            <div class="row h-100">
+                                <div class="col-12 align-self-start">
+                                    <h6 class="ad-caption">Продам МФУ SCX-4200 как новый</h6>
+                                    <div class="text-secondary h6 mb-0">Samsung</div>
+                                    <div class="text-secondary h6 mb-0">SCX-4200</div>
+                                    <div class="short-descrip">
+                                        <p class="mb-0">Отличный МФУ (принтер, сканер и копир, 3 в 1) для дома и учебы! Так же отлично подойдет для офиса.</p>
+                                        <p class="mb-0">Лазерный, Ч/Б, USB/LAN, 24 тыс. стр.</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 align-self-end">
+                                    <div class="text-secondary h6 mb-0">Сегодня, 09:43</div>
+                                    <div class="text-secondary h6 mb-0">г. Самара, ул. Красногвардейская дом 20</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row h-100">
+                                <div class="col-12 align-self-start">
+                                    <div class="h4">
+                                        <span>4 500 ₽</span>
+                                        <span class="text-secondary fa fa-legal"></span>
+                                    </div>
+                                    <a href="#page">Алексей</a>
+                                    <div class="rating">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star-half-o"></span>
+                                        <span class="fa fa-star-o"></span>
+                                        <span class="text-secondary h6 mb-0">184 отзыва</span>
+                                    </div>
+                                </div>
+                                <div class="col-12 align-self-end">
+                                    <button type="button" class="btn btn-primary btn-sm w-100 mt-2 btn-ask">Спросить</button>
+                                    <button type="button" class="btn btn-success btn-sm w-100 mt-1 btn-ask">Купить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Вкладка черновики -->
                 <div class="tab-pane fade" id="draft-ads" role="tabpanel" aria-labelledby="draft-ad-tab">
                     2
+                </div>
+                <!-- Вкладка объявления в архиве -->
+                <div class="tab-pane fade" id="archive-ads" role="tabpanel" aria-labelledby="archive-ad-tab">
+                    3
                 </div>
             </div>
         </div>
